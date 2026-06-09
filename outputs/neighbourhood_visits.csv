@@ -1,0 +1,271 @@
+recommender,neighbourhood,visits,share,run
+popularity,Barceloneta,300,0.035269221725840585,0
+popularity,Born,5,0.0005878203620973431,0
+popularity,Collserola,0,0.0,0
+popularity,Diagonal Mar,0,0.0,0
+popularity,Dreta de l'Eixample,1406,0.16529508582177285,0
+popularity,El Carmel,0,0.0,0
+popularity,El Clot,0,0.0,0
+popularity,Font de la Guatlla,0,0.0,0
+popularity,Fort Pienc,0,0.0,0
+popularity,Gotic,2360,0.2774512109099459,0
+popularity,Guinardo,0,0.0,0
+popularity,Horta,0,0.0,0
+popularity,La Bordeta,0,0.0,0
+popularity,La Guineueta,0,0.0,0
+popularity,La Maternitat,0,0.0,0
+popularity,La Salut,1290,0.1516576534211145,0
+popularity,Montjuic,0,0.0,0
+popularity,Pedralbes,0,0.0,0
+popularity,Poblenou,0,0.0,0
+popularity,Raval,734,0.08629202915588996,0
+popularity,Raval/Gotic,1412,0.16600047025628967,0
+popularity,Sagrada Familia,975,0.1146249706089819,0
+popularity,Sant Andreu,0,0.0,0
+popularity,Sant Antoni,0,0.0,0
+popularity,Sant Gervasi,0,0.0,0
+popularity,Sant Pere,24,0.0028215377380672465,0
+popularity,Sants,0,0.0,0
+popularity,Turo de la Peira,0,0.0,0
+popularity,Vallvidrera,0,0.0,0
+popularity,Vila de Gracia,0,0.0,0
+personalized,Barceloneta,437,0.05061971504691301,0
+personalized,Born,468,0.054210587281362216,0
+personalized,Collserola,38,0.004401714351905479,0
+personalized,Diagonal Mar,411,0.047608015753504,0
+personalized,Dreta de l'Eixample,894,0.1035561218579868,0
+personalized,El Carmel,22,0.0025483609405768564,0
+personalized,El Clot,31,0.0035908722344492067,0
+personalized,Font de la Guatlla,415,0.04807135410633615,0
+personalized,Fort Pienc,298,0.0345187072859956,0
+personalized,Gotic,1196,0.13853816749681455,0
+personalized,Guinardo,90,0.010425112938723502,0
+personalized,Horta,3,0.00034750376462411677,0
+personalized,La Bordeta,25,0.002895864705200973,0
+personalized,La Guineueta,108,0.012510135526468203,0
+personalized,La Maternitat,16,0.0018533534113286227,0
+personalized,La Salut,180,0.020850225877447004,0
+personalized,Montjuic,320,0.03706706822657246,0
+personalized,Pedralbes,27,0.0031275338816170507,0
+personalized,Poblenou,650,0.0752924823352253,0
+personalized,Raval,520,0.06023398586818024,0
+personalized,Raval/Gotic,655,0.07587165527626549,0
+personalized,Sagrada Familia,250,0.02895864705200973,0
+personalized,Sant Andreu,27,0.0031275338816170507,0
+personalized,Sant Antoni,176,0.02038688752461485,0
+personalized,Sant Gervasi,145,0.016796015290165642,0
+personalized,Sant Pere,686,0.0794625275107147,0
+personalized,Sants,130,0.01505849646704506,0
+personalized,Turo de la Peira,75,0.00868759411560292,0
+personalized,Vallvidrera,63,0.007297579057106452,0
+personalized,Vila de Gracia,277,0.03208618093362678,0
+sustainable,Barceloneta,201,0.023382968822708235,0
+sustainable,Born,345,0.040134946486738016,0
+sustainable,Collserola,226,0.02629129827826896,0
+sustainable,Diagonal Mar,366,0.04257794322940903,0
+sustainable,Dreta de l'Eixample,327,0.0380409492787343,0
+sustainable,El Carmel,118,0.013727315030246627,0
+sustainable,El Clot,173,0.020125639832480224,0
+sustainable,Font de la Guatlla,227,0.02640763145649139,0
+sustainable,Fort Pienc,406,0.04723127035830619,0
+sustainable,Gotic,443,0.051535597952536066,0
+sustainable,Guinardo,232,0.026989297347603535,0
+sustainable,Horta,185,0.021521637971149372,0
+sustainable,La Bordeta,147,0.01710097719869707,0
+sustainable,La Guineueta,378,0.043973941368078175,0
+sustainable,La Maternitat,32,0.0037226617031177293,0
+sustainable,La Salut,144,0.01675197766402978,0
+sustainable,Montjuic,318,0.036993950674732434,0
+sustainable,Pedralbes,224,0.026058631921824105,0
+sustainable,Poblenou,552,0.06421591437878083,0
+sustainable,Raval,414,0.04816193578408562,0
+sustainable,Raval/Gotic,87,0.010120986505351327,0
+sustainable,Sagrada Familia,103,0.011982317356910192,0
+sustainable,Sant Andreu,598,0.06956724057701257,0
+sustainable,Sant Antoni,412,0.04792926942764077,0
+sustainable,Sant Gervasi,188,0.021870637505816658,0
+sustainable,Sant Pere,420,0.048859934853420196,0
+sustainable,Sants,275,0.031991624011167986,0
+sustainable,Turo de la Peira,250,0.02908329455560726,0
+sustainable,Vallvidrera,227,0.02640763145649139,0
+sustainable,Vila de Gracia,578,0.06724057701256399,0
+popularity,Barceloneta,266,0.031401251328060445,1
+popularity,Born,3,0.00035414945106835086,1
+popularity,Collserola,0,0.0,1
+popularity,Diagonal Mar,0,0.0,1
+popularity,Dreta de l'Eixample,1363,0.16090190060205406,1
+popularity,El Carmel,0,0.0,1
+popularity,El Clot,0,0.0,1
+popularity,Font de la Guatlla,0,0.0,1
+popularity,Fort Pienc,0,0.0,1
+popularity,Gotic,2381,0.2810766143312478,1
+popularity,Guinardo,0,0.0,1
+popularity,Horta,0,0.0,1
+popularity,La Bordeta,0,0.0,1
+popularity,La Guineueta,0,0.0,1
+popularity,La Maternitat,0,0.0,1
+popularity,La Salut,1309,0.15452721048282375,1
+popularity,Montjuic,0,0.0,1
+popularity,Pedralbes,0,0.0,1
+popularity,Poblenou,0,0.0,1
+popularity,Raval,732,0.08641246606067761,1
+popularity,Raval/Gotic,1420,0.16763074017235274,1
+popularity,Sagrada Familia,974,0.11498052178019125,1
+popularity,Sant Andreu,0,0.0,1
+popularity,Sant Antoni,0,0.0,1
+popularity,Sant Gervasi,0,0.0,1
+popularity,Sant Pere,23,0.002715145791524023,1
+popularity,Sants,0,0.0,1
+popularity,Turo de la Peira,0,0.0,1
+popularity,Vallvidrera,0,0.0,1
+popularity,Vila de Gracia,0,0.0,1
+personalized,Barceloneta,464,0.0537846296510954,1
+personalized,Born,447,0.05181407209922337,1
+personalized,Collserola,29,0.0033615393531934625,1
+personalized,Diagonal Mar,422,0.048916193346470384,1
+personalized,Dreta de l'Eixample,890,0.10316448359800626,1
+personalized,El Carmel,14,0.0016228121015416715,1
+personalized,El Clot,22,0.0025501333024226264,1
+personalized,Font de la Guatlla,458,0.05308913875043468,1
+personalized,Fort Pienc,272,0.03152892082995248,1
+personalized,Gotic,1209,0.14014141648313436,1
+personalized,Guinardo,85,0.009852787759360148,1
+personalized,Horta,2,0.0002318303002202388,1
+personalized,La Bordeta,16,0.0018546424017619103,1
+personalized,La Guineueta,106,0.012287005911672656,1
+personalized,La Maternitat,14,0.0016228121015416715,1
+personalized,La Salut,160,0.018546424017619103,1
+personalized,Montjuic,318,0.036861017735017966,1
+personalized,Pedralbes,20,0.002318303002202388,1
+personalized,Poblenou,668,0.07743132027355976,1
+personalized,Raval,529,0.06131911440825316,1
+personalized,Raval/Gotic,706,0.08183609597774429,1
+personalized,Sagrada Familia,241,0.027935551176538773,1
+personalized,Sant Andreu,30,0.0034774545033035816,1
+personalized,Sant Antoni,168,0.01947374521850006,1
+personalized,Sant Gervasi,131,0.01518488466442564,1
+personalized,Sant Pere,674,0.07812681117422048,1
+personalized,Sants,136,0.01576446041497624,1
+personalized,Turo de la Peira,71,0.008229975657818477,1
+personalized,Vallvidrera,55,0.006375333256056567,1
+personalized,Vila de Gracia,270,0.03129709052973224,1
+sustainable,Barceloneta,209,0.024398785897735233,1
+sustainable,Born,341,0.039808545412094325,1
+sustainable,Collserola,224,0.026149894933457856,1
+sustainable,Diagonal Mar,355,0.04144291384543544,1
+sustainable,Dreta de l'Eixample,346,0.04039224842400187,1
+sustainable,El Carmel,116,0.013541909876254962,1
+sustainable,El Clot,167,0.019495680597711885,1
+sustainable,Font de la Guatlla,241,0.0281344851739435,1
+sustainable,Fort Pienc,400,0.046696240952603316,1
+sustainable,Gotic,451,0.052650011674060235,1
+sustainable,Guinardo,225,0.026266635535839366,1
+sustainable,Horta,194,0.02264767686201261,1
+sustainable,La Bordeta,135,0.015759981321503618,1
+sustainable,La Guineueta,370,0.04319402288115807,1
+sustainable,La Maternitat,24,0.002801774457156199,1
+sustainable,La Salut,142,0.016577165538174177,1
+sustainable,Montjuic,318,0.03712351155731963,1
+sustainable,Pedralbes,226,0.026383376138220872,1
+sustainable,Poblenou,559,0.06525799673126313,1
+sustainable,Raval,414,0.04833060938594443,1
+sustainable,Raval/Gotic,97,0.011323838431006305,1
+sustainable,Sagrada Familia,102,0.011907541442913845,1
+sustainable,Sant Andreu,590,0.0688769554050899,1
+sustainable,Sant Antoni,401,0.046812981554984825,1
+sustainable,Sant Gervasi,172,0.020079383609619427,1
+sustainable,Sant Pere,417,0.048680831193088955,1
+sustainable,Sants,276,0.03222040625729629,1
+sustainable,Turo de la Peira,252,0.02941863180014009,1
+sustainable,Vallvidrera,230,0.026850338547746905,1
+sustainable,Vila de Gracia,572,0.06677562456222275,1
+popularity,Barceloneta,288,0.0338863395693611,2
+popularity,Born,12,0.0014119308153900459,2
+popularity,Collserola,0,0.0,2
+popularity,Diagonal Mar,0,0.0,2
+popularity,Dreta de l'Eixample,1408,0.16566654900576538,2
+popularity,El Carmel,0,0.0,2
+popularity,El Clot,0,0.0,2
+popularity,Font de la Guatlla,0,0.0,2
+popularity,Fort Pienc,0,0.0,2
+popularity,Gotic,2349,0.2763854571126015,2
+popularity,Guinardo,0,0.0,2
+popularity,Horta,0,0.0,2
+popularity,La Bordeta,0,0.0,2
+popularity,La Guineueta,0,0.0,2
+popularity,La Maternitat,0,0.0,2
+popularity,La Salut,1293,0.15213554535827745,2
+popularity,Montjuic,0,0.0,2
+popularity,Pedralbes,0,0.0,2
+popularity,Poblenou,0,0.0,2
+popularity,Raval,732,0.08612777973879279,2
+popularity,Raval/Gotic,1403,0.16507824449935288,2
+popularity,Sagrada Familia,993,0.11683727497352629,2
+popularity,Sant Andreu,0,0.0,2
+popularity,Sant Antoni,0,0.0,2
+popularity,Sant Gervasi,0,0.0,2
+popularity,Sant Pere,21,0.0024708789269325803,2
+popularity,Sants,0,0.0,2
+popularity,Turo de la Peira,0,0.0,2
+popularity,Vallvidrera,0,0.0,2
+popularity,Vila de Gracia,0,0.0,2
+personalized,Barceloneta,428,0.04946261412226973,2
+personalized,Born,464,0.05362302091760083,2
+personalized,Collserola,41,0.0047382410724604185,2
+personalized,Diagonal Mar,417,0.048191378712585234,2
+personalized,Dreta de l'Eixample,901,0.10412573673870335,2
+personalized,El Carmel,28,0.0032358719519241883,2
+personalized,El Clot,27,0.0031203050964983244,2
+personalized,Font de la Guatlla,423,0.04888477984514041,2
+personalized,Fort Pienc,289,0.03339882121807466,2
+personalized,Gotic,1242,0.14353403443892293,2
+personalized,Guinardo,91,0.010516583843753612,2
+personalized,Horta,0,0.0,2
+personalized,La Bordeta,18,0.0020802033976655494,2
+personalized,La Guineueta,98,0.011325551831734658,2
+personalized,La Maternitat,14,0.0016179359759620942,2
+personalized,La Salut,163,0.01883739743441581,2
+personalized,Montjuic,313,0.03617242574829539,2
+personalized,Pedralbes,29,0.003351438807350052,2
+personalized,Poblenou,644,0.07442505489425633,2
+personalized,Raval,505,0.05836126199006125,2
+personalized,Raval/Gotic,682,0.07881659540043916,2
+personalized,Sagrada Familia,265,0.030625216687853923,2
+personalized,Sant Andreu,34,0.003929273084479371,2
+personalized,Sant Antoni,159,0.018375130012712355,2
+personalized,Sant Gervasi,138,0.015948226048769214,2
+personalized,Sant Pere,693,0.08008783081012366,2
+personalized,Sants,129,0.014908124349936437,2
+personalized,Turo de la Peira,71,0.008205246735236335,2
+personalized,Vallvidrera,68,0.007858546168958742,2
+personalized,Vila de Gracia,279,0.03224315266381602,2
+sustainable,Barceloneta,190,0.022188485343921524,2
+sustainable,Born,343,0.04005605512086886,2
+sustainable,Collserola,225,0.026275837907275487,2
+sustainable,Diagonal Mar,359,0.04192455914983067,2
+sustainable,Dreta de l'Eixample,341,0.03982249211724863,2
+sustainable,El Carmel,121,0.014130561719023707,2
+sustainable,El Clot,171,0.01996963680952937,2
+sustainable,Font de la Guatlla,238,0.02779399743080696,2
+sustainable,Fort Pienc,404,0.047179726731285766,2
+sustainable,Gotic,469,0.054770524348943125,2
+sustainable,Guinardo,221,0.025808711900035034,2
+sustainable,Horta,195,0.022772392852972088,2
+sustainable,La Bordeta,139,0.016232628751605745,2
+sustainable,La Guineueta,376,0.04390984468060259,2
+sustainable,La Maternitat,19,0.0022188485343921523,2
+sustainable,La Salut,147,0.01716688076608665,2
+sustainable,Montjuic,314,0.03666939156837557,2
+sustainable,Pedralbes,228,0.026626182412705826,2
+sustainable,Poblenou,538,0.06282844797384095,2
+sustainable,Raval,414,0.0483475417493869,2
+sustainable,Raval/Gotic,92,0.010743898166530421,2
+sustainable,Sagrada Familia,113,0.0131963097045428,2
+sustainable,Sant Andreu,587,0.06855074156253649,2
+sustainable,Sant Antoni,398,0.04647903772042508,2
+sustainable,Sant Gervasi,168,0.01961929230409903,2
+sustainable,Sant Pere,427,0.04986570127291837,2
+sustainable,Sants,274,0.03199813149597104,2
+sustainable,Turo de la Peira,246,0.028728249445287866,2
+sustainable,Vallvidrera,236,0.027560434427186732,2
+sustainable,Vila de Gracia,570,0.06656545603176457,2

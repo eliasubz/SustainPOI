@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barcelona POI Recommender Evaluation</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="nav-tab active" data-view="simulationView" type="button">Simulation</button>
+    <button class="nav-tab" data-view="recommendationsView" type="button">Recommendations</button>
+    <button class="nav-tab" data-view="movementView" type="button">Movement</button>
+    <button class="nav-tab" data-view="reportView" type="button">Report</button>
+    <a href="../outputs/summary_metrics.csv" class="nav-link">CSV</a>
+  </header>
+
+  <main>
+    <section class="search-stage" id="searchStage" aria-labelledby="app-title">
+      <h1 id="app-title" class="logo" aria-label="Sustainable POI">
+        <span class="blue">S</span><span class="red">u</span><span class="yellow">s</span><span class="blue">t</span><span class="green">a</span><span class="red">i</span><span class="blue">n</span><span class="green">P</span><span class="yellow">O</span><span class="red">I</span>
+      </h1>
+      <form class="search-form" id="searchForm">
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Search POIs, districts, or recommender results">
+        <button type="submit">Search</button>
+      </form>
+      <div class="strategy-tabs" role="tablist" aria-label="Recommender strategy">
+        <button class="tab active" data-strategy="all" type="button">All</button>
+        <button class="tab" data-strategy="popularity" type="button">Popularity</button>
+        <button class="tab" data-strategy="personalized" type="button">Personalized</button>
+        <button class="tab" data-strategy="sustainable" type="button">Sustainable</button>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="summary-line" id="summaryLine">Loading experiment results...</div>
+
+      <section class="metric-grid" id="metricGrid" aria-label="Main metrics"></section>
+
+      <section id="simulationView" class="view active">
+      <section class="panel map-panel">
+        <div class="panel-heading">
+          <h2>POI Map</h2>
+          <span>Circle size = mean visits</span>
+        </div>
+        <div class="map-wrap">
+          <div id="poiMap" role="img" aria-label="Barcelona POI visit map"></div>
+          <div class="map-legend">
+            <span><i class="legend-dot popularity"></i>Popularity</span>
+            <span><i class="legend-dot personalized"></i>Personalized</span>
+            <span><i class="legend-dot sustainable"></i>Sustainable</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Strategy Comparison</h2>
+          <span id="activeStrategyLabel">All recommenders</span>
+        </div>
+        <div class="chart-grid">
+          <div class="chart-block">
+            <h3>Satisfaction</h3>
+            <div id="satisfactionChart" class="bar-chart"></div>
+          </div>
+          <div class="chart-block">
+            <h3>District Fairness</h3>
+            <div id="giniChart" class="bar-chart"></div>
+          </div>
+          <div class="chart-block">
+            <h3>Sustainability</h3>
+            <div id="sustainabilityChart" class="bar-chart"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-layout">
+        <section class="panel results-panel">
+          <div class="panel-heading">
+            <h2>POI Results</h2>
+            <span id="resultCount">0 results</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>POI</th>
+                  <th>District</th>
+                  <th>Recommender</th>
+                  <th>Visits</th>
+                  <th>Utilization</th>
+                </tr>
+              </thead>
+              <tbody id="poiTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="panel side-panel">
+          <div class="panel-heading">
+            <h2>Neighbourhoods</h2>
+            <span>Mean visits</span>
+          </div>
+          <div id="neighbourhoodList" class="neighbourhood-list"></div>
+        </aside>
+      </section>
+      </section>
+
+      <section id="recommendationsView" class="view">
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Recommendation Quality</h2>
+            <span>Mean values from recommendation lists</span>
+          </div>
+          <div class="chart-grid">
+            <div class="chart-block">
+              <h3>Precision@5</h3>
+              <div id="precisionChart" class="bar-chart"></div>
+            </div>
+            <div class="chart-block">
+              <h3>Recall@5</h3>
+              <div id="recallChart" class="bar-chart"></div>
+            </div>
+            <div class="chart-block">
+              <h3>Diversity@5</h3>
+              <div id="diversityChart" class="bar-chart"></div>
+            </div>
+            <div class="chart-block">
+              <h3>Exposure Gini</h3>
+              <div id="exposureChart" class="bar-chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Sample Recommendation Events</h2>
+            <span id="recommendationCount">0 rows</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tourist</th>
+                  <th>Interests</th>
+                  <th>Recommended POIs</th>
+                  <th>Chosen</th>
+                  <th>Precision@5</th>
+                </tr>
+              </thead>
+              <tbody id="recommendationTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section id="movementView" class="view">
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Movement Analysis</h2>
+            <span>Consecutive POI transitions</span>
+          </div>
+          <div class="metric-grid movement-metrics" id="movementMetrics"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Top District Transitions</h2>
+            <span id="transitionCount">0 transitions</span>
+          </div>
+          <div id="transitionList" class="transition-list"></div>
+        </section>
+      </section>
+
+      <section id="reportView" class="view">
+        <section class="panel report-panel">
+          <div class="panel-heading">
+            <h2>Project Report</h2>
+            <span>Rendered from PROJECT_REPORT.md</span>
+          </div>
+          <article id="reportContent" class="report-content">Loading report...</article>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    Mesa agent-based simulation - Barcelona - 51 POIs - generated experiment outputs
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
