@@ -487,6 +487,30 @@ td {
   border-radius: 2px;
 }
 
+.sweep-body {
+  padding: 16px 18px 6px;
+}
+
+.sweep-figure {
+  margin: 0 0 22px;
+}
+
+.sweep-figure img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 8px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.sweep-figure figcaption {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .report-content a {
   color: #1a0dab;
   text-decoration: none;

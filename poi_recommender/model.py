@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import heapq
 from collections import Counter, defaultdict
-from itertools import combinations
+from itertools import combinations, count
+from statistics import median
 
 import numpy as np
 from mesa import Agent, Model
@@ -11,6 +13,23 @@ from .recommenders import entropy, get_recommender, gini, haversine_km
 
 
 CITY_CENTER = (41.3874, 2.1686)
+
+# Reference window (hours) used to convert a POI's daily-throughput capacity into an
+# instantaneous concurrent capacity via Little's Law:  L = daily_capacity * dwell / window.
+# Roughly the span over which the simulated tourist population is active.
+ACTIVE_DAY_WINDOW = 10.0
+
+# Local-economy spend generated per visit on top of the entry price, scaled by the POI's
+# local value (markets, neighbourhood high streets, etc. capture more local spending).
+LOCAL_SPEND_SCALE = 18.0
+
+
+def _sample_beta_mean(rng: np.random.Generator, mean: float, concentration: float = 6.0) -> float:
+    """Draw from a Beta distribution with a target mean (re-parameterised by concentration)."""
+    mean = float(np.clip(mean, 1e-3, 1 - 1e-3))
+    a = mean * concentration
+    b = (1.0 - mean) * concentration
+    return float(rng.beta(a, b))
 
 
 class TouristAgent(Agent):
@@ -26,13 +45,30 @@ class TouristAgent(Agent):
         self.sustainability_sensitivity = float(rng.beta(2.0, 2.0))
         self.outdoor_preference = float(rng.beta(2.0, 2.0))
         self.travel_with_kids = bool(rng.random() < 0.22)
-        self.time_available = float(rng.normal(7.0, 1.4))
+        self.time_available = float(np.clip(rng.normal(7.0, 1.4), 3.0, 11.0))
+
+        # Temporal: when the tourist starts their day and when it ends.
+        self.start_hour = float(np.clip(rng.normal(10.0, 1.0), 8.5, 12.5))
+        self.day_end = min(23.0, self.start_hour + self.time_available)
+
+        # Behavioural realism: how reliably they follow the app, and how much they trust
+        # a sustainability nudge that asks them to give up some personal utility.
+        self.compliance = _sample_beta_mean(rng, model.compliance_mean)
+        self.trust_in_sustainability = _sample_beta_mean(rng, model.trust_mean)
+
         self.current_lat, self.current_lon = CITY_CENTER
         self.visited: list[POI] = []
+        self.visited_ids: set[int] = set()
         self.satisfaction_scores: list[float] = []
         self.travel_km = 0.0
-        self.elapsed_time = 0.0
+        self.visits_done = 0
+        self.last_arrival_hour = self.start_hour
         self.tourist_id = 0
+
+        # A tourist's personal fallback set: their favourite POIs city-wide. A non-compliant
+        # tourist ignores the app and gravitates to these instead.
+        ranked = sorted(model.pois, key=self.interest_match, reverse=True)
+        self.personal_candidates = ranked[:10]
 
     @staticmethod
     def _sample_interests(rng: np.random.Generator) -> dict[str, float]:
@@ -53,62 +89,71 @@ class TouristAgent(Agent):
             weights[interest] = min(1.0, weights[interest] + float(rng.uniform(.35, .65)))
         return weights
 
-    def step(self) -> None:
-        recommender = self.model.recommender
-        remaining_time = self.time_available
-        visited_ids = set()
-        for sequence in range(self.model.visits_per_tourist):
-            candidates = [poi for poi in recommender.recommend(self, self.model, k=self.model.recommendation_k + 4) if poi.id not in visited_ids]
-            recommendations = candidates[: self.model.recommendation_k]
-            chosen = self._choose_visit(recommendations, remaining_time)
-            self.model.record_recommendation(self, sequence, recommendations, chosen)
-            if chosen is None:
-                break
-            distance = haversine_km(self.current_lat, self.current_lon, chosen.lat, chosen.lon)
-            travel_time = self._travel_time(distance)
-            previous = self.visited[-1] if self.visited else None
-            remaining_time -= chosen.duration + travel_time
-            self.travel_km += distance
-            self.current_lat, self.current_lon = chosen.lat, chosen.lon
-            visited_ids.add(chosen.id)
-            self.visited.append(chosen)
-            self.satisfaction_scores.append(self._satisfaction(chosen, distance))
-            self.model.record_itinerary(self, sequence, previous, chosen, distance, travel_time)
-            self.model.record_visit(chosen)
-            self.elapsed_time += chosen.duration + travel_time
-
-    def _choose_visit(self, candidates: list[POI], remaining_time: float) -> POI | None:
-        feasible = []
-        for poi in candidates[: self.model.recommendation_k]:
-            distance = haversine_km(self.current_lat, self.current_lon, poi.lat, poi.lon)
-            if poi.duration + self._travel_time(distance) > remaining_time:
-                continue
-            if poi.price > self.budget and self.model.rng.random() < 0.80:
-                continue
-            crowding = self.model.poi_visits[poi.id] / poi.capacity
-            skip_probability = min(0.75, crowding * self.crowd_aversion * 0.55)
-            if self.model.rng.random() < skip_probability:
-                continue
-            feasible.append(poi)
-        return feasible[0] if feasible else None
-
+    # ------------------------------------------------------------------ behaviour
     def _travel_time(self, distance_km: float) -> float:
         speeds = {"walking": 4.2, "public_transport": 12.0, "taxi": 18.0}
         return distance_km / speeds[self.mobility_mode]
 
-    def _satisfaction(self, poi: POI, distance_km: float) -> float:
+    def _follows_recommender(self, model: "TourismModel") -> bool:
+        prob = self.compliance
+        # Following a sustainability nudge requires trust, because it can cost personal utility.
+        if model.recommender_name == "sustainable":
+            prob *= 0.35 + 0.65 * self.trust_in_sustainability
+        return bool(model.rng.random() < prob)
+
+    def _feasible(self, poi: POI, time_now: float, model: "TourismModel") -> bool:
+        if poi.id in self.visited_ids:
+            return False
+        distance = haversine_km(self.current_lat, self.current_lon, poi.lat, poi.lon)
+        arrival = time_now + self._travel_time(distance)
+        # Opening hours: must arrive after opening and finish before closing.
+        if arrival < poi.open_hour:
+            return False
+        finish = arrival + poi.duration
+        if finish > poi.close_hour or finish > self.day_end:
+            return False
+        # Budget: a tourist usually skips POIs they cannot afford.
+        if poi.price > self.budget and model.rng.random() < 0.80:
+            return False
+        # Crowd aversion: probabilistically skip POIs that are busy right now.
+        crowding = model.current_crowding(poi)
+        skip_probability = min(0.75, crowding * self.crowd_aversion * 0.55)
+        if model.rng.random() < skip_probability:
+            return False
+        return True
+
+    def decide(self, time_now: float, model: "TourismModel") -> tuple[list[POI], POI | None, bool]:
+        """Return (recommended_list, chosen_poi_or_None, followed_recommender)."""
+        candidates = model.recommender.recommend(self, model, k=model.recommendation_k + 6)
+        candidates = [poi for poi in candidates if poi.id not in self.visited_ids]
+        recommendations = candidates[: model.recommendation_k]
+
+        followed = self._follows_recommender(model)
+        if followed:
+            feasible = [poi for poi in recommendations if self._feasible(poi, time_now, model)]
+            chosen = feasible[0] if feasible else None
+        else:
+            # Defect: consider the recommended list plus personal favourites, pick by own taste.
+            pool = {poi.id: poi for poi in recommendations}
+            for poi in self.personal_candidates:
+                pool.setdefault(poi.id, poi)
+            feasible = [poi for poi in pool.values() if self._feasible(poi, time_now, model)]
+            feasible.sort(key=self.interest_match, reverse=True)
+            chosen = feasible[0] if feasible else None
+        return recommendations, chosen, followed
+
+    def interest_match(self, poi: POI) -> float:
+        return sum(self.interests[tag] for tag in poi.tags) / len(poi.tags)
+
+    def satisfaction(self, poi: POI, distance_km: float, crowding: float) -> float:
         interest_match = self.interest_match(poi)
         price_fit = 1.0 if poi.price <= self.budget else max(0.0, 1 - (poi.price - self.budget) / 40)
-        crowding = self.model.poi_visits[poi.id] / poi.capacity
         distance_fit = max(0.0, 1 - max(0.0, distance_km - self.walking_tolerance) / 8)
         return float(np.clip(
             0.56 * interest_match + 0.15 * price_fit + 0.14 * distance_fit + 0.15 * (1 - min(1.0, crowding)),
             0,
             1,
         ))
-
-    def interest_match(self, poi: POI) -> float:
-        return sum(self.interests[tag] for tag in poi.tags) / len(poi.tags)
 
     def primary_interests(self) -> str:
         ranked = sorted(self.interests.items(), key=lambda item: item[1], reverse=True)
@@ -123,35 +168,134 @@ class TourismModel(Model):
         seed: int = 42,
         visits_per_tourist: int = 3,
         recommendation_k: int = 5,
+        sustainability_strength: float = 1.0,
+        compliance_mean: float = 0.72,
+        trust_mean: float = 0.6,
     ) -> None:
         super().__init__(rng=seed)
         self.rng = np.random.default_rng(seed)
         self.pois = load_barcelona_pois()
         self.districts = sorted({poi.district for poi in self.pois})
-        self.recommender = get_recommender(recommender_name)
+        self.recommender = get_recommender(recommender_name, sustainability_strength=sustainability_strength)
         self.recommender_name = recommender_name
         self.visits_per_tourist = visits_per_tourist
         self.recommendation_k = recommendation_k
+        self.sustainability_strength = sustainability_strength
+        self.compliance_mean = compliance_mean
+        self.trust_mean = trust_mean
+
+        # Instantaneous concurrent capacity per POI (Little's Law from daily capacity).
+        self.instant_capacity = {
+            poi.id: max(1.0, poi.capacity * poi.duration / ACTIVE_DAY_WINDOW) for poi in self.pois
+        }
+        self.local_value_median = median(poi.local_value for poi in self.pois)
+
+        # Live (instantaneous) state during the simulated day.
+        self.occupancy: Counter[int] = Counter()
+        self.peak_occupancy_ratio = 0.0
+        self.over_capacity_arrivals = 0
+
+        # Cumulative state used for end-of-day evaluation.
         self.poi_visits: Counter[int] = Counter()
         self.district_visits: Counter[str] = Counter({district: 0 for district in self.districts})
         self.neighbourhood_visits: Counter[str] = Counter()
         self.poi_satisfaction: defaultdict[int, list[float]] = defaultdict(list)
+        self.district_spending: Counter[str] = Counter({district: 0.0 for district in self.districts})
+        self.neighbourhood_spending: Counter[str] = Counter()
+        self.total_spend = 0.0
+        self.local_captured_spend = 0.0
+
         self.recommendation_events: list[dict[str, float | str | int]] = []
         self.itinerary_events: list[dict[str, float | str | int]] = []
+
         self.agents_by_id = [TouristAgent(self) for _ in range(n_tourists)]
         for tourist_id, agent in enumerate(self.agents_by_id):
             agent.tourist_id = tourist_id
 
-    def step(self) -> None:
-        for agent in self.agents_by_id:
-            agent.step()
+    # ----------------------------------------------------------------- crowding
+    def current_crowding(self, poi: POI) -> float:
+        return self.occupancy[poi.id] / self.instant_capacity[poi.id]
 
+    # ----------------------------------------------------------------- the day
+    def step(self) -> None:
+        """Run a full simulated day as a time-ordered discrete-event simulation.
+
+        Decisions are processed in true chronological order, and crowding reflects who is
+        actually inside a POI at that moment (arrivals raise occupancy, departures lower it).
+        This removes the processing-order artefact of a single cumulative visit counter and
+        lets congestion build up and decay over the day.
+        """
+        counter = count()
+        heap: list[tuple[float, int, str, object]] = []
+        for agent in self.agents_by_id:
+            heapq.heappush(heap, (agent.start_hour, next(counter), "decide", agent))
+
+        while heap:
+            time_now, _, kind, payload = heapq.heappop(heap)
+            if kind == "depart":
+                self.occupancy[int(payload)] -= 1
+                continue
+
+            agent: TouristAgent = payload  # type: ignore[assignment]
+            if agent.visits_done >= self.visits_per_tourist or time_now >= agent.day_end:
+                continue
+
+            recommendations, chosen, followed = agent.decide(time_now, self)
+            self.record_recommendation(agent, agent.visits_done, recommendations, chosen, followed)
+            if chosen is None:
+                continue
+
+            distance = haversine_km(agent.current_lat, agent.current_lon, chosen.lat, chosen.lon)
+            travel_time = agent._travel_time(distance)
+            arrival = time_now + travel_time
+            previous = agent.visited[-1] if agent.visited else None
+
+            occ_before = self.occupancy[chosen.id]
+            if occ_before >= self.instant_capacity[chosen.id]:
+                self.over_capacity_arrivals += 1
+            self.occupancy[chosen.id] += 1
+            ratio = self.occupancy[chosen.id] / self.instant_capacity[chosen.id]
+            self.peak_occupancy_ratio = max(self.peak_occupancy_ratio, ratio)
+
+            agent.current_lat, agent.current_lon = chosen.lat, chosen.lon
+            agent.travel_km += distance
+            agent.visited.append(chosen)
+            agent.visited_ids.add(chosen.id)
+            agent.satisfaction_scores.append(agent.satisfaction(chosen, distance, ratio))
+            agent.visits_done += 1
+            agent.last_arrival_hour = arrival
+
+            self.record_visit(chosen)
+            self.record_spending(chosen)
+            self.poi_satisfaction[chosen.id].append(agent.satisfaction_scores[-1])
+            self.record_itinerary(agent, agent.visits_done - 1, previous, chosen, distance, travel_time, arrival)
+
+            depart_time = arrival + chosen.duration
+            heapq.heappush(heap, (depart_time, next(counter), "depart", chosen.id))
+            heapq.heappush(heap, (depart_time, next(counter), "decide", agent))
+
+    # ----------------------------------------------------------------- recording
     def record_visit(self, poi: POI) -> None:
         self.poi_visits[poi.id] += 1
         self.district_visits[poi.district] += 1
         self.neighbourhood_visits[poi.neighbourhood] += 1
 
-    def record_recommendation(self, tourist: TouristAgent, sequence: int, recommendations: list[POI], chosen: POI | None) -> None:
+    def record_spending(self, poi: POI) -> None:
+        spend = poi.price + LOCAL_SPEND_SCALE * poi.local_value
+        self.district_spending[poi.district] += spend
+        self.neighbourhood_spending[poi.neighbourhood] += spend
+        self.total_spend += spend
+        if poi.local_value >= self.local_value_median:
+            self.local_captured_spend += spend
+
+    def record_recommendation(
+        self,
+        tourist: TouristAgent,
+        sequence: int,
+        recommendations: list[POI],
+        chosen: POI | None,
+        followed: bool,
+    ) -> None:
         relevant = [poi for poi in recommendations if tourist.interest_match(poi) >= 0.55]
         all_relevant = [poi for poi in self.pois if tourist.interest_match(poi) >= 0.55]
         visited_recommended = chosen is not None and chosen.id in {poi.id for poi in recommendations}
@@ -164,6 +308,9 @@ class TourismModel(Model):
             "mobility_mode": tourist.mobility_mode,
             "crowd_aversion": tourist.crowd_aversion,
             "sustainability_sensitivity": tourist.sustainability_sensitivity,
+            "compliance": tourist.compliance,
+            "trust": tourist.trust_in_sustainability,
+            "followed": int(followed),
             "recommended_pois": "|".join(poi.name for poi in recommendations),
             "recommended_districts": "|".join(poi.district for poi in recommendations),
             "chosen_poi": chosen.name if chosen else "",
@@ -184,6 +331,7 @@ class TourismModel(Model):
         chosen: POI,
         distance_km: float,
         travel_time_hours: float,
+        arrival_hour: float,
     ) -> None:
         self.itinerary_events.append({
             "recommender": self.recommender_name,
@@ -195,9 +343,18 @@ class TourismModel(Model):
             "to_district": chosen.district,
             "distance_km": distance_km,
             "travel_time_hours": travel_time_hours,
-            "arrival_hour": 9.0 + tourist.elapsed_time + travel_time_hours,
+            "arrival_hour": arrival_hour,
             "mobility_mode": tourist.mobility_mode,
         })
+
+    # ----------------------------------------------------------------- metrics
+    def _intra_tourist_diversity(self) -> float:
+        diversities = [
+            recommendation_diversity(agent.visited)
+            for agent in self.agents_by_id
+            if len(agent.visited) >= 2
+        ]
+        return float(np.mean(diversities)) if diversities else 0.0
 
     def summary_metrics(self) -> dict[str, float | str | int]:
         all_satisfaction = [score for agent in self.agents_by_id for score in agent.satisfaction_scores]
@@ -210,12 +367,13 @@ class TourismModel(Model):
             for poi in self.pois
             for _ in range(self.poi_visits[poi.id])
         ]
-        recommendation_exposure = Counter()
+        recommendation_exposure: Counter[str] = Counter()
         for event in self.recommendation_events:
             for poi_name in str(event["recommended_pois"]).split("|"):
                 if poi_name:
                     recommendation_exposure[poi_name] += 1
         exposure_with_zeros = {poi.name: recommendation_exposure[poi.name] for poi in self.pois}
+        followed_flags = [event["followed"] for event in self.recommendation_events]
         return {
             "recommender": self.recommender_name,
             "tourists": len(self.agents_by_id),
@@ -230,7 +388,15 @@ class TourismModel(Model):
             "district_gini": gini(self.district_visits),
             "max_poi_utilization": max(utilizations),
             "over_capacity_share": over_capacity_visits / total_visits if total_visits else 0.0,
+            "peak_occupancy_ratio": self.peak_occupancy_ratio,
+            "temporal_overcap_share": self.over_capacity_arrivals / total_visits if total_visits else 0.0,
             "avg_travel_km": float(np.mean([agent.travel_km for agent in self.agents_by_id])),
+            "intra_tourist_diversity": self._intra_tourist_diversity(),
+            "wealth_gini": gini(self.district_spending),
+            "wealth_entropy": entropy([int(round(v)) for v in self.district_spending.values()]),
+            "neighbourhood_spend_gini": gini(self.neighbourhood_spending),
+            "local_spend_share": self.local_captured_spend / self.total_spend if self.total_spend else 0.0,
+            "avg_compliance": float(np.mean(followed_flags)) if followed_flags else 0.0,
             "precision_at_5": float(np.mean([event["precision_at_k"] for event in self.recommendation_events])) if self.recommendation_events else 0.0,
             "recall_at_5": float(np.mean([event["recall_at_k"] for event in self.recommendation_events])) if self.recommendation_events else 0.0,
             "hit_rate_at_5": float(np.mean([event["hit"] for event in self.recommendation_events])) if self.recommendation_events else 0.0,
@@ -271,6 +437,21 @@ class TourismModel(Model):
                 "share": self.neighbourhood_visits[neighbourhood] / total,
             }
             for neighbourhood in neighbourhoods
+        ]
+
+    def district_rows(self) -> list[dict[str, float | str | int]]:
+        total_visits = max(1, sum(self.district_visits.values()))
+        total_spend = max(1e-9, self.total_spend)
+        return [
+            {
+                "recommender": self.recommender_name,
+                "district": district,
+                "visits": self.district_visits[district],
+                "visit_share": self.district_visits[district] / total_visits,
+                "spend": self.district_spending[district],
+                "spend_share": self.district_spending[district] / total_spend,
+            }
+            for district in self.districts
         ]
 
     def recommendation_rows(self) -> list[dict[str, float | str | int]]:

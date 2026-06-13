@@ -36,6 +36,52 @@ class POI:
     outdoor: bool
     family_friendly: bool
     accessibility: float
+    open_hour: float
+    close_hour: float
+
+    @property
+    def operating_hours(self) -> float:
+        return max(1.0, self.close_hour - self.open_hour)
+
+
+# Opening hours are simplified but plausible. They are used for two things:
+#   1. feasibility (a tourist cannot visit a POI that is closed when they arrive), and
+#   2. deriving an *instantaneous* concurrent capacity from the daily-throughput capacity.
+# Exact, name-keyed overrides take priority; otherwise hours are assigned by category.
+_HOUR_OVERRIDES: dict[str, tuple[float, float]] = {
+    "Magic Fountain": (19.0, 22.5),          # evening light-and-water show
+    "Tibidabo Amusement Park": (11.0, 20.0),
+    "Tibidabo Temple": (10.0, 18.0),
+    "Bunkers del Carmel": (9.0, 21.5),        # popular for sunset
+    "Gracia Squares": (8.0, 23.5),            # nightlife squares
+    "Raval Street Art Route": (8.0, 22.0),
+    "Poblenou Rambla": (7.5, 23.5),
+}
+
+_STREET_LIKE = {
+    "La Rambla", "Gothic Quarter", "Passeig de Gracia", "Sant Andreu Old Town",
+}
+_MARKETS = {
+    "Mercat de la Boqueria", "Mercat dels Encants", "Sant Antoni Market", "Sants Market",
+}
+_PARK_KEYWORDS = ("Beach", "Park", "Parc", "Viewpoints")
+
+
+def _opening_hours(name: str, tags: tuple[str, ...]) -> tuple[float, float]:
+    if name in _HOUR_OVERRIDES:
+        return _HOUR_OVERRIDES[name]
+    if name in _STREET_LIKE:
+        return (7.0, 23.0)
+    if name in _MARKETS:
+        return (8.0, 20.0)
+    if "beach" in tags:
+        return (8.0, 21.0)
+    if any(keyword in name for keyword in _PARK_KEYWORDS):
+        return (8.0, 20.5)
+    if tags and tags[0] == "nature":
+        return (8.0, 20.5)
+    # Default: museums, monuments, religious and architectural sites.
+    return (9.5, 19.5)
 
 
 def load_barcelona_pois() -> list[POI]:
@@ -92,4 +138,9 @@ def load_barcelona_pois() -> list[POI]:
         ("Forum Park", "Sant Marti", "Diagonal Mar", 41.4117, 2.2269, ("beach", "nature", "family"), .31, 0, 1.4, 1000, .76, .55, .30, True, True, .82),
         ("Diagonal Mar Park", "Sant Marti", "Diagonal Mar", 41.4075, 2.2165, ("nature", "family"), .29, 0, 1.2, 800, .86, .62, .34, True, True, .88),
     ]
-    return [POI(i, *row) for i, row in enumerate(raw)]
+    pois = []
+    for i, row in enumerate(raw):
+        name, tags = row[0], row[5]
+        open_hour, close_hour = _opening_hours(name, tags)
+        pois.append(POI(i, *row, open_hour=open_hour, close_hour=close_hour))
+    return pois

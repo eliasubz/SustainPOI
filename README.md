@@ -1,114 +1,60 @@
-# Sustainable POI Recommender Evaluation
+# Sustainable POI Recommender — Evaluation Simulator
 
-Agent-based simulator for evaluating whether a sustainability-aware recommender can reduce tourist overcrowding in Barcelona while preserving user satisfaction.
+An agent-based simulator (Mesa) that evaluates whether a **sustainability-aware**
+multi-criteria POI recommender improves city-level tourism management in
+Barcelona, compared with popularity-based and personalized-interest baselines.
+Tourists are heterogeneous agents that receive recommendations and decide which
+POIs to actually visit under time, budget, opening-hours, crowding and
+compliance constraints; the simulator then measures crowding, spatial fairness,
+wealth distribution and recommendation quality across strategies.
 
-The project compares three strategies:
+See `PROJECT_REPORT.md` for the full write-up, results and discussion.
 
-- `popularity`: recommends the most famous POIs, with small budget/crowd penalties.
-- `personalized`: recommends POIs that best match each tourist's interests and constraints.
-- `sustainable`: balances personal relevance with sustainability, local economic value, low crowding, and under-visited neighbourhood exposure.
+## Structure
 
-## Quick Start
-
-```bash
-pip install -r requirements.txt
-python run_experiment.py --tourists 3000 --runs 3 --output outputs
+```
+poi_recommender/
+  data.py          51 Barcelona POIs with coordinates, opening hours, attributes
+  recommenders.py  popularity / personalized / sustainable scoring (tunable strength)
+  model.py         event-driven day simulation: agents, crowding, spending, metrics
+run_experiment.py  runs the 3-way comparison, writes CSVs + plots, calls stats.py
+stats.py           95% CIs, paired t-tests (Holm-corrected), Cohen's d
+sensitivity.py     sweeps over sustainability strength and over compliance/trust
+web/               optional static dashboard (reads ../outputs/*.csv)
+outputs/           generated metrics, figures and statistical tables
 ```
 
-Outputs are written to `outputs/`:
+## Requirements
 
-- `summary_metrics.csv`: run-level metrics for every recommender.
-- `poi_visits.csv`: POI-level visit counts, utilization, and coordinates.
-- `neighbourhood_visits.csv`: neighbourhood-level visit distribution.
-- `recommendations.csv`: full recommendation-event log.
-- `itineraries.csv`: full tourist movement log.
-- `recommendations_sample.csv`: smaller recommendation-event sample used by the web interface.
-- `movement_summary.csv`: recommender-level movement summary used by the web interface.
-- `movement_transitions.csv`: district transition counts used by the web interface.
-- `metrics_comparison.png`: comparison chart for the main evaluation metrics.
-- `neighbourhood_distribution.png`: neighbourhood visit distribution by recommender.
-
-For a faster smoke test:
+Python 3.12. Install dependencies:
 
 ```bash
-python run_experiment.py --tourists 1000 --runs 2
+pip install mesa numpy pandas scipy matplotlib seaborn
 ```
 
-## Web Interface
+## Running
 
-After generating outputs, serve the project root:
+```bash
+# Main comparison (also runs the statistical analysis at the end)
+python run_experiment.py --tourists 4000 --runs 10 --output outputs
+
+# Sensitivity sweeps
+python sensitivity.py --tourists 3000 --runs 5 --output outputs
+
+# Statistical analysis only, against an existing run
+python stats.py --input outputs
+```
+
+## Web dashboard
+
+The dashboard is static and reads the CSVs in `outputs/`. Because browsers block
+`fetch` of local files, serve the project root over HTTP, e.g.:
 
 ```bash
 python -m http.server 8000
+# then open http://localhost:8000/web/index.html
 ```
 
-Then open:
-
-```text
-http://localhost:8000/web/
-```
-
-The interface loads the generated CSV files from `outputs/` and lets you search POIs, filter by recommender, compare headline metrics, inspect neighbourhood distribution, view recommendation-quality metrics, analyze movement transitions, and read the rendered project report.
-
-The map uses Leaflet with OpenStreetMap tiles, so it needs an internet connection when the page is opened.
-
-## Model
-
-Each tourist agent has:
-
-- interests across architecture, religion, food, museums, nature, shopping, nightlife, beach, history, and family activities
-- budget
-- mobility mode
-- walking tolerance
-- crowd aversion
-- sustainability sensitivity
-- outdoor preference
-- family travel flag
-- daily time budget
-
-Each POI has:
-
-- category tags
-- district and neighbourhood
-- latitude and longitude
-- popularity
-- price
-- visit duration
-- capacity
-- sustainability score
-- local economic value
-- cultural value
-- outdoor/family/accessibility attributes
-
-Tourists receive a ranked recommendation list and attempt to visit up to `visits_per_tourist` POIs. Crowding is updated dynamically after every choice, so later tourists see different conditions.
-
-## Evaluation Metrics
-
-The experiment reports:
-
-- average user satisfaction
-- average sustainability of visited POIs
-- POI and neighbourhood coverage
-- POI and district entropy
-- district Gini coefficient
-- maximum POI utilization
-- share of visits above POI capacity
-- average travel distance
-- precision@5 and recall@5
-- recommendation diversity@5 and novelty@5
-- recommendation exposure fairness
-- tourist movement transitions
-
-## Report
-
-The teacher-facing report is in:
-
-```text
-PROJECT_REPORT.md
-```
-
-It summarizes the simulation design, recommender baselines, metrics, results, limitations, and remaining gaps.
-
-## Repository Description
-
-Agent-based simulation for evaluating sustainable tourism recommender systems in Barcelona using Mesa, recommendation metrics, crowding indicators, movement analysis, and a lightweight web interface.
+The full per-event logs (`outputs/recommendations.csv`, `outputs/itineraries.csv`)
+are regenerated by `run_experiment.py` but are large and git-ignored; the sampled
+and aggregated outputs in `outputs/` are sufficient for the report and dashboard.

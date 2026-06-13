@@ -35,7 +35,9 @@ class BaseRecommender:
 
     @staticmethod
     def common_penalties(poi: POI, tourist, model) -> tuple[float, float, float]:
-        crowd = model.poi_visits[poi.id] / poi.capacity
+        # Crowding is now the *instantaneous* occupancy at the current simulated time,
+        # not the cumulative all-day visit count. This makes congestion time-dependent.
+        crowd = model.current_crowding(poi)
         price_penalty = max(0.0, (poi.price - tourist.budget) / 40.0)
         distance = haversine_km(tourist.current_lat, tourist.current_lon, poi.lat, poi.lon)
         distance_penalty = minmax_distance_penalty(distance, tourist.walking_tolerance)
@@ -75,39 +77,46 @@ class PersonalizedRecommender(BaseRecommender):
 class SustainableRecommender(BaseRecommender):
     name = "sustainable"
 
+    def __init__(self, strength: float = 1.0) -> None:
+        # `strength` scales every sustainability-oriented term relative to interest match.
+        # strength=1.0 is the default behaviour; strength=0.0 collapses to an
+        # interest+accessibility recommender (used by the sensitivity analysis).
+        self.strength = strength
+
     def score(self, poi: POI, tourist, model) -> float:
         price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
         interest_match = sum(tourist.interests[tag] for tag in poi.tags) / len(poi.tags)
         district_visits = model.district_visits[poi.district]
         mean_district_visits = max(1.0, sum(model.district_visits.values()) / len(model.districts))
         under_visited_bonus = max(0.0, 1.0 - district_visits / (mean_district_visits * 1.25))
-        current_crowding = model.poi_visits[poi.id] / poi.capacity
+        current_crowding = model.current_crowding(poi)
         low_crowding_bonus = max(0.0, 1.0 - current_crowding)
         family_bonus = 0.08 if tourist.travel_with_kids and poi.family_friendly else 0.0
         outdoor_bonus = 0.06 if tourist.outdoor_preference > 0.6 and poi.outdoor else 0.0
         sustainable_weight = 0.18 + 0.22 * tourist.sustainability_sensitivity
+        s = self.strength
         return (
             0.42 * interest_match
-            + sustainable_weight * poi.sustainability
-            + 0.16 * poi.local_value
-            + 0.14 * poi.cultural_value
-            + 0.22 * under_visited_bonus
-            + 0.18 * low_crowding_bonus
+            + s * sustainable_weight * poi.sustainability
+            + s * 0.16 * poi.local_value
+            + s * 0.14 * poi.cultural_value
+            + s * 0.22 * under_visited_bonus
+            + s * 0.18 * low_crowding_bonus
             + 0.06 * poi.accessibility
             + family_bonus
             + outdoor_bonus
             - 0.25 * price_penalty
             - 0.18 * distance_penalty
             - 0.45 * crowd_penalty
-            - 0.06 * poi.popularity
+            - s * 0.06 * poi.popularity
         )
 
 
-def get_recommender(name: str) -> BaseRecommender:
+def get_recommender(name: str, sustainability_strength: float = 1.0) -> BaseRecommender:
     recommenders = {
         "popularity": PopularityRecommender(),
         "personalized": PersonalizedRecommender(),
-        "sustainable": SustainableRecommender(),
+        "sustainable": SustainableRecommender(strength=sustainability_strength),
     }
     return recommenders[name]
 
@@ -120,7 +129,7 @@ def entropy(counts: list[int]) -> float:
     return -sum(p * math.log(p) for p in probs)
 
 
-def gini(counter: Counter | dict[str, int]) -> float:
+def gini(counter: Counter | dict[str, int] | dict[str, float]) -> float:
     values = sorted(counter.values())
     n = len(values)
     total = sum(values)

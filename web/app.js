@@ -22,7 +22,11 @@ const metricSpecs = [
   ["avg_satisfaction", "Satisfaction", 3],
   ["avg_sustainability", "Sustainability", 3],
   ["poi_coverage", "POI Coverage", 3],
-  ["district_gini", "District Gini", 3]
+  ["district_gini", "District Gini", 3],
+  ["wealth_gini", "Wealth Gini", 3],
+  ["local_spend_share", "Local Spend Share", 3],
+  ["temporal_overcap_share", "Over-Capacity Share", 3],
+  ["peak_occupancy_ratio", "Peak Occupancy", 2]
 ];
 
 const strategyColors = {
@@ -556,10 +560,10 @@ document.querySelectorAll(".nav-tab").forEach(tab => {
     document.querySelectorAll(".view").forEach(view => view.classList.remove("active"));
     tab.classList.add("active");
     document.getElementById(tab.dataset.view).classList.add("active");
-    const isReport = tab.dataset.view === "reportView";
-    document.getElementById("searchStage").style.display = isReport ? "none" : "";
-    document.getElementById("summaryLine").style.display = isReport ? "none" : "";
-    document.getElementById("metricGrid").style.display = isReport ? "none" : "";
+    const isStandalone = tab.dataset.view === "reportView" || tab.dataset.view === "sensitivityView";
+    document.getElementById("searchStage").style.display = isStandalone ? "none" : "";
+    document.getElementById("summaryLine").style.display = isStandalone ? "none" : "";
+    document.getElementById("metricGrid").style.display = isStandalone ? "none" : "";
     if (tab.dataset.view === "simulationView" && state.map) {
       setTimeout(() => state.map.invalidateSize(), 0);
     }
