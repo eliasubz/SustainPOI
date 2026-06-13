@@ -14,7 +14,7 @@ from poi_recommender.model import TourismModel
 import stats as stats_module
 
 
-RECOMMENDERS = ["popularity", "personalized", "sustainable"]
+RECOMMENDERS = ["random", "popularity", "personalized", "crowd_aware", "sustainable"]
 
 # Metrics shown in the printed table and the small-multiple comparison plot.
 REPORT_METRICS = [

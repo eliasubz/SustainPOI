@@ -1,4 +1,55 @@
 recommender,poi,district,neighbourhood,lat,lon,visits,capacity,utilization,popularity,sustainability,local_value,run
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,127,900,0.1411111111111111,0.99,0.45,0.45,0
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,87,550,0.15818181818181817,0.94,0.42,0.4,0
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,128,520,0.24615384615384617,0.9,0.46,0.42,0
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,180,800,0.225,0.92,0.62,0.5,0
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,482,1200,0.40166666666666667,0.88,0.35,0.55,0
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,314,700,0.44857142857142857,0.87,0.5,0.82,0
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,259,650,0.3984615384615385,0.84,0.5,0.48,0
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,339,1800,0.18833333333333332,0.89,0.44,0.7,0
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,217,480,0.45208333333333334,0.8,0.55,0.52,0
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,267,500,0.534,0.76,0.58,0.55,0
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,264,1300,0.20307692307692307,0.74,0.83,0.56,0
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,297,1600,0.185625,0.82,0.57,0.64,0
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,149,400,0.3725,0.72,0.54,0.46,0
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,145,650,0.2230769230769231,0.66,0.7,0.5,0
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,183,600,0.305,0.68,0.61,0.48,0
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,217,350,0.62,0.58,0.62,0.45,0
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,196,700,0.28,0.62,0.6,0.75,0
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,0
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,67,750,0.08933333333333333,0.77,0.38,0.43,0
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,195,260,0.75,0.36,0.72,0.62,0
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,167,420,0.3976190476190476,0.55,0.78,0.58,0
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,82,800,0.1025,0.63,0.58,0.54,0
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,236,600,0.3933333333333333,0.61,0.7,0.5,0
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,211,500,0.422,0.65,0.66,0.42,0
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,117,450,0.26,0.64,0.64,0.52,0
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,166,350,0.4742857142857143,0.32,0.88,0.64,0
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,281,650,0.4323076923076923,0.43,0.78,0.88,0
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,225,330,0.6818181818181818,0.45,0.7,0.55,0
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,324,700,0.46285714285714286,0.4,0.68,0.84,0
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,332,1200,0.27666666666666667,0.47,0.72,0.58,0
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,172,220,0.7818181818181819,0.24,0.73,0.62,0
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,237,700,0.3385714285714286,0.49,0.76,0.9,0
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,332,1600,0.2075,0.83,0.43,0.62,0
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,367,750,0.48933333333333334,0.48,0.71,0.86,0
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,109,270,0.40370370370370373,0.46,0.62,0.5,0
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,259,500,0.518,0.5,0.75,0.72,0
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,135,390,0.34615384615384615,0.38,0.68,0.54,0
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,160,350,0.45714285714285713,0.42,0.72,0.64,0
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,136,260,0.5230769230769231,0.51,0.6,0.5,0
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,175,300,0.5833333333333334,0.2,0.84,0.82,0
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,209,600,0.34833333333333333,0.22,0.8,0.86,0
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,315,700,0.45,0.18,0.9,0.72,0
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,278,500,0.556,0.16,0.88,0.66,0
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,336,500,0.672,0.3,0.78,0.88,0
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,141,280,0.5035714285714286,0.18,0.86,0.84,0
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,230,650,0.35384615384615387,0.28,0.93,0.52,0
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,188,300,0.6266666666666667,0.44,0.7,0.54,0
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,234,500,0.468,0.34,0.74,0.82,0
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,210,550,0.38181818181818183,0.21,0.88,0.66,0
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,266,1000,0.266,0.31,0.76,0.55,0
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,263,800,0.32875,0.29,0.86,0.62,0
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,763,900,0.8477777777777777,0.99,0.45,0.45,0
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,401,550,0.7290909090909091,0.94,0.42,0.4,0
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,367,520,0.7057692307692308,0.9,0.46,0.42,0
@@ -101,6 +152,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,120,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,76,550,0.13818181818181818,0.21,0.88,0.66,0
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,234,1000,0.234,0.31,0.76,0.55,0
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,276,800,0.345,0.29,0.86,0.62,0
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,305,900,0.3388888888888889,0.99,0.45,0.45,0
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,183,550,0.3327272727272727,0.94,0.42,0.4,0
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,174,520,0.3346153846153846,0.9,0.46,0.42,0
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,245,800,0.30625,0.92,0.62,0.5,0
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,566,1200,0.4716666666666667,0.88,0.35,0.55,0
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,295,700,0.42142857142857143,0.87,0.5,0.82,0
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,273,650,0.42,0.84,0.5,0.48,0
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,718,1800,0.3988888888888889,0.89,0.44,0.7,0
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,190,480,0.3958333333333333,0.8,0.55,0.52,0
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,204,500,0.408,0.76,0.58,0.55,0
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,396,1300,0.3046153846153846,0.74,0.83,0.56,0
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,519,1600,0.324375,0.82,0.57,0.64,0
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,134,400,0.335,0.72,0.54,0.46,0
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,162,650,0.24923076923076923,0.66,0.7,0.5,0
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,201,600,0.335,0.68,0.61,0.48,0
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,138,350,0.3942857142857143,0.58,0.62,0.45,0
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,240,700,0.34285714285714286,0.62,0.6,0.75,0
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,0
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,124,750,0.16533333333333333,0.77,0.38,0.43,0
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,76,260,0.2923076923076923,0.36,0.72,0.62,0
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,89,420,0.2119047619047619,0.55,0.78,0.58,0
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,146,800,0.1825,0.63,0.58,0.54,0
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,185,600,0.30833333333333335,0.61,0.7,0.5,0
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,109,500,0.218,0.65,0.66,0.42,0
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,131,450,0.2911111111111111,0.64,0.64,0.52,0
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,67,350,0.19142857142857142,0.32,0.88,0.64,0
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,201,650,0.30923076923076925,0.43,0.78,0.88,0
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,117,330,0.35454545454545455,0.45,0.7,0.55,0
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,266,700,0.38,0.4,0.68,0.84,0
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,366,1200,0.305,0.47,0.72,0.58,0
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,82,220,0.37272727272727274,0.24,0.73,0.62,0
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,238,700,0.34,0.49,0.76,0.9,0
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,613,1600,0.383125,0.83,0.43,0.62,0
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,282,750,0.376,0.48,0.71,0.86,0
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,69,270,0.25555555555555554,0.46,0.62,0.5,0
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,175,500,0.35,0.5,0.75,0.72,0
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,98,390,0.2512820512820513,0.38,0.68,0.54,0
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,92,350,0.26285714285714284,0.42,0.72,0.64,0
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,84,260,0.3230769230769231,0.51,0.6,0.5,0
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,46,300,0.15333333333333332,0.2,0.84,0.82,0
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,128,600,0.21333333333333335,0.22,0.8,0.86,0
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,183,700,0.26142857142857145,0.18,0.9,0.72,0
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,131,500,0.262,0.16,0.88,0.66,0
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,214,500,0.428,0.3,0.78,0.88,0
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,59,280,0.21071428571428572,0.18,0.86,0.84,0
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,154,650,0.23692307692307693,0.28,0.93,0.52,0
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,111,300,0.37,0.44,0.7,0.54,0
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,146,500,0.292,0.34,0.74,0.82,0
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,116,550,0.2109090909090909,0.21,0.88,0.66,0
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,242,1000,0.242,0.31,0.76,0.55,0
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,231,800,0.28875,0.29,0.86,0.62,0
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,205,900,0.22777777777777777,0.99,0.45,0.45,0
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,103,550,0.18727272727272729,0.94,0.42,0.4,0
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,127,520,0.24423076923076922,0.9,0.46,0.42,0
@@ -152,6 +254,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,180,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,163,550,0.2963636363636364,0.21,0.88,0.66,0
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,218,1000,0.218,0.31,0.76,0.55,0
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,241,800,0.30125,0.29,0.86,0.62,0
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,138,900,0.15333333333333332,0.99,0.45,0.45,1
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,83,550,0.1509090909090909,0.94,0.42,0.4,1
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,130,520,0.25,0.9,0.46,0.42,1
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,177,800,0.22125,0.92,0.62,0.5,1
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,419,1200,0.3491666666666667,0.88,0.35,0.55,1
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,315,700,0.45,0.87,0.5,0.82,1
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,283,650,0.43538461538461537,0.84,0.5,0.48,1
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,376,1800,0.2088888888888889,0.89,0.44,0.7,1
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,245,480,0.5104166666666666,0.8,0.55,0.52,1
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,261,500,0.522,0.76,0.58,0.55,1
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,265,1300,0.20384615384615384,0.74,0.83,0.56,1
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,284,1600,0.1775,0.82,0.57,0.64,1
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,130,400,0.325,0.72,0.54,0.46,1
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,160,650,0.24615384615384617,0.66,0.7,0.5,1
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,175,600,0.2916666666666667,0.68,0.61,0.48,1
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,200,350,0.5714285714285714,0.58,0.62,0.45,1
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,223,700,0.31857142857142856,0.62,0.6,0.75,1
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,1
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,59,750,0.07866666666666666,0.77,0.38,0.43,1
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,183,260,0.7038461538461539,0.36,0.72,0.62,1
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,196,420,0.4666666666666667,0.55,0.78,0.58,1
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,94,800,0.1175,0.63,0.58,0.54,1
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,224,600,0.37333333333333335,0.61,0.7,0.5,1
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,216,500,0.432,0.65,0.66,0.42,1
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,122,450,0.27111111111111114,0.64,0.64,0.52,1
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,185,350,0.5285714285714286,0.32,0.88,0.64,1
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,250,650,0.38461538461538464,0.43,0.78,0.88,1
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,220,330,0.6666666666666666,0.45,0.7,0.55,1
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,317,700,0.45285714285714285,0.4,0.68,0.84,1
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,319,1200,0.2658333333333333,0.47,0.72,0.58,1
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,195,220,0.8863636363636364,0.24,0.73,0.62,1
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,239,700,0.3414285714285714,0.49,0.76,0.9,1
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,319,1600,0.199375,0.83,0.43,0.62,1
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,374,750,0.49866666666666665,0.48,0.71,0.86,1
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,108,270,0.4,0.46,0.62,0.5,1
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,261,500,0.522,0.5,0.75,0.72,1
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,123,390,0.3153846153846154,0.38,0.68,0.54,1
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,144,350,0.4114285714285714,0.42,0.72,0.64,1
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,139,260,0.5346153846153846,0.51,0.6,0.5,1
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,161,300,0.5366666666666666,0.2,0.84,0.82,1
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,213,600,0.355,0.22,0.8,0.86,1
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,322,700,0.46,0.18,0.9,0.72,1
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,249,500,0.498,0.16,0.88,0.66,1
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,328,500,0.656,0.3,0.78,0.88,1
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,138,280,0.4928571428571429,0.18,0.86,0.84,1
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,235,650,0.36153846153846153,0.28,0.93,0.52,1
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,186,300,0.62,0.44,0.7,0.54,1
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,241,500,0.482,0.34,0.74,0.82,1
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,231,550,0.42,0.21,0.88,0.66,1
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,253,1000,0.253,0.31,0.76,0.55,1
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,272,800,0.34,0.29,0.86,0.62,1
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,795,900,0.8833333333333333,0.99,0.45,0.45,1
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,403,550,0.7327272727272728,0.94,0.42,0.4,1
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,354,520,0.6807692307692308,0.9,0.46,0.42,1
@@ -254,6 +407,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,139,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,73,550,0.13272727272727272,0.21,0.88,0.66,1
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,226,1000,0.226,0.31,0.76,0.55,1
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,269,800,0.33625,0.29,0.86,0.62,1
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,296,900,0.3288888888888889,0.99,0.45,0.45,1
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,184,550,0.33454545454545453,0.94,0.42,0.4,1
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,178,520,0.3423076923076923,0.9,0.46,0.42,1
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,239,800,0.29875,0.92,0.62,0.5,1
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,574,1200,0.47833333333333333,0.88,0.35,0.55,1
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,301,700,0.43,0.87,0.5,0.82,1
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,270,650,0.4153846153846154,0.84,0.5,0.48,1
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,725,1800,0.4027777777777778,0.89,0.44,0.7,1
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,195,480,0.40625,0.8,0.55,0.52,1
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,205,500,0.41,0.76,0.58,0.55,1
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,403,1300,0.31,0.74,0.83,0.56,1
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,525,1600,0.328125,0.82,0.57,0.64,1
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,137,400,0.3425,0.72,0.54,0.46,1
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,157,650,0.24153846153846154,0.66,0.7,0.5,1
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,205,600,0.3416666666666667,0.68,0.61,0.48,1
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,127,350,0.3628571428571429,0.58,0.62,0.45,1
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,233,700,0.33285714285714285,0.62,0.6,0.75,1
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,1
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,128,750,0.17066666666666666,0.77,0.38,0.43,1
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,88,260,0.3384615384615385,0.36,0.72,0.62,1
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,90,420,0.21428571428571427,0.55,0.78,0.58,1
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,152,800,0.19,0.63,0.58,0.54,1
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,174,600,0.29,0.61,0.7,0.5,1
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,113,500,0.226,0.65,0.66,0.42,1
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,129,450,0.2866666666666667,0.64,0.64,0.52,1
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,68,350,0.19428571428571428,0.32,0.88,0.64,1
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,202,650,0.31076923076923074,0.43,0.78,0.88,1
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,113,330,0.3424242424242424,0.45,0.7,0.55,1
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,264,700,0.37714285714285717,0.4,0.68,0.84,1
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,367,1200,0.30583333333333335,0.47,0.72,0.58,1
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,84,220,0.38181818181818183,0.24,0.73,0.62,1
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,239,700,0.3414285714285714,0.49,0.76,0.9,1
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,605,1600,0.378125,0.83,0.43,0.62,1
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,297,750,0.396,0.48,0.71,0.86,1
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,72,270,0.26666666666666666,0.46,0.62,0.5,1
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,174,500,0.348,0.5,0.75,0.72,1
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,94,390,0.24102564102564103,0.38,0.68,0.54,1
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,94,350,0.26857142857142857,0.42,0.72,0.64,1
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,86,260,0.33076923076923076,0.51,0.6,0.5,1
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,48,300,0.16,0.2,0.84,0.82,1
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,129,600,0.215,0.22,0.8,0.86,1
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,175,700,0.25,0.18,0.9,0.72,1
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,131,500,0.262,0.16,0.88,0.66,1
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,219,500,0.438,0.3,0.78,0.88,1
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,56,280,0.2,0.18,0.86,0.84,1
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,146,650,0.2246153846153846,0.28,0.93,0.52,1
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,114,300,0.38,0.44,0.7,0.54,1
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,158,500,0.316,0.34,0.74,0.82,1
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,116,550,0.2109090909090909,0.21,0.88,0.66,1
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,244,1000,0.244,0.31,0.76,0.55,1
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,241,800,0.30125,0.29,0.86,0.62,1
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,200,900,0.2222222222222222,0.99,0.45,0.45,1
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,104,550,0.1890909090909091,0.94,0.42,0.4,1
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,124,520,0.23846153846153847,0.9,0.46,0.42,1
@@ -305,6 +509,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,187,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,165,550,0.3,0.21,0.88,0.66,1
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,218,1000,0.218,0.31,0.76,0.55,1
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,238,800,0.2975,0.29,0.86,0.62,1
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,131,900,0.14555555555555555,0.99,0.45,0.45,2
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,105,550,0.19090909090909092,0.94,0.42,0.4,2
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,127,520,0.24423076923076922,0.9,0.46,0.42,2
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,177,800,0.22125,0.92,0.62,0.5,2
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,453,1200,0.3775,0.88,0.35,0.55,2
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,314,700,0.44857142857142857,0.87,0.5,0.82,2
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,277,650,0.42615384615384616,0.84,0.5,0.48,2
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,377,1800,0.20944444444444443,0.89,0.44,0.7,2
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,231,480,0.48125,0.8,0.55,0.52,2
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,249,500,0.498,0.76,0.58,0.55,2
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,229,1300,0.17615384615384616,0.74,0.83,0.56,2
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,280,1600,0.175,0.82,0.57,0.64,2
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,124,400,0.31,0.72,0.54,0.46,2
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,142,650,0.21846153846153846,0.66,0.7,0.5,2
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,163,600,0.27166666666666667,0.68,0.61,0.48,2
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,188,350,0.5371428571428571,0.58,0.62,0.45,2
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,220,700,0.3142857142857143,0.62,0.6,0.75,2
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,2
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,80,750,0.10666666666666667,0.77,0.38,0.43,2
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,176,260,0.676923076923077,0.36,0.72,0.62,2
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,161,420,0.38333333333333336,0.55,0.78,0.58,2
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,82,800,0.1025,0.63,0.58,0.54,2
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,229,600,0.38166666666666665,0.61,0.7,0.5,2
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,212,500,0.424,0.65,0.66,0.42,2
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,134,450,0.29777777777777775,0.64,0.64,0.52,2
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,170,350,0.4857142857142857,0.32,0.88,0.64,2
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,268,650,0.4123076923076923,0.43,0.78,0.88,2
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,213,330,0.6454545454545455,0.45,0.7,0.55,2
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,329,700,0.47,0.4,0.68,0.84,2
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,341,1200,0.2841666666666667,0.47,0.72,0.58,2
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,194,220,0.8818181818181818,0.24,0.73,0.62,2
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,254,700,0.3628571428571429,0.49,0.76,0.9,2
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,374,1600,0.23375,0.83,0.43,0.62,2
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,358,750,0.47733333333333333,0.48,0.71,0.86,2
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,99,270,0.36666666666666664,0.46,0.62,0.5,2
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,251,500,0.502,0.5,0.75,0.72,2
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,152,390,0.38974358974358975,0.38,0.68,0.54,2
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,175,350,0.5,0.42,0.72,0.64,2
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,136,260,0.5230769230769231,0.51,0.6,0.5,2
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,161,300,0.5366666666666666,0.2,0.84,0.82,2
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,228,600,0.38,0.22,0.8,0.86,2
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,316,700,0.4514285714285714,0.18,0.9,0.72,2
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,271,500,0.542,0.16,0.88,0.66,2
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,341,500,0.682,0.3,0.78,0.88,2
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,151,280,0.5392857142857143,0.18,0.86,0.84,2
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,240,650,0.36923076923076925,0.28,0.93,0.52,2
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,183,300,0.61,0.44,0.7,0.54,2
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,231,500,0.462,0.34,0.74,0.82,2
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,226,550,0.4109090909090909,0.21,0.88,0.66,2
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,265,1000,0.265,0.31,0.76,0.55,2
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,234,800,0.2925,0.29,0.86,0.62,2
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,808,900,0.8977777777777778,0.99,0.45,0.45,2
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,401,550,0.7290909090909091,0.94,0.42,0.4,2
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,377,520,0.725,0.9,0.46,0.42,2
@@ -407,6 +662,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,122,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,81,550,0.14727272727272728,0.21,0.88,0.66,2
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,235,1000,0.235,0.31,0.76,0.55,2
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,278,800,0.3475,0.29,0.86,0.62,2
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,301,900,0.33444444444444443,0.99,0.45,0.45,2
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,183,550,0.3327272727272727,0.94,0.42,0.4,2
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,180,520,0.34615384615384615,0.9,0.46,0.42,2
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,246,800,0.3075,0.92,0.62,0.5,2
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,574,1200,0.47833333333333333,0.88,0.35,0.55,2
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,298,700,0.4257142857142857,0.87,0.5,0.82,2
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,275,650,0.4230769230769231,0.84,0.5,0.48,2
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,717,1800,0.3983333333333333,0.89,0.44,0.7,2
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,190,480,0.3958333333333333,0.8,0.55,0.52,2
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,200,500,0.4,0.76,0.58,0.55,2
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,402,1300,0.30923076923076925,0.74,0.83,0.56,2
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,517,1600,0.323125,0.82,0.57,0.64,2
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,135,400,0.3375,0.72,0.54,0.46,2
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,158,650,0.24307692307692308,0.66,0.7,0.5,2
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,196,600,0.32666666666666666,0.68,0.61,0.48,2
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,128,350,0.3657142857142857,0.58,0.62,0.45,2
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,234,700,0.3342857142857143,0.62,0.6,0.75,2
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,2
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,128,750,0.17066666666666666,0.77,0.38,0.43,2
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,82,260,0.3153846153846154,0.36,0.72,0.62,2
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,95,420,0.2261904761904762,0.55,0.78,0.58,2
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,145,800,0.18125,0.63,0.58,0.54,2
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,187,600,0.31166666666666665,0.61,0.7,0.5,2
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,108,500,0.216,0.65,0.66,0.42,2
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,130,450,0.28888888888888886,0.64,0.64,0.52,2
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,67,350,0.19142857142857142,0.32,0.88,0.64,2
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,198,650,0.3046153846153846,0.43,0.78,0.88,2
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,119,330,0.3606060606060606,0.45,0.7,0.55,2
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,266,700,0.38,0.4,0.68,0.84,2
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,376,1200,0.31333333333333335,0.47,0.72,0.58,2
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,76,220,0.34545454545454546,0.24,0.73,0.62,2
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,236,700,0.33714285714285713,0.49,0.76,0.9,2
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,612,1600,0.3825,0.83,0.43,0.62,2
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,289,750,0.38533333333333336,0.48,0.71,0.86,2
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,68,270,0.2518518518518518,0.46,0.62,0.5,2
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,173,500,0.346,0.5,0.75,0.72,2
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,100,390,0.2564102564102564,0.38,0.68,0.54,2
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,92,350,0.26285714285714284,0.42,0.72,0.64,2
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,85,260,0.3269230769230769,0.51,0.6,0.5,2
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,44,300,0.14666666666666667,0.2,0.84,0.82,2
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,122,600,0.20333333333333334,0.22,0.8,0.86,2
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,180,700,0.2571428571428571,0.18,0.9,0.72,2
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,131,500,0.262,0.16,0.88,0.66,2
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,218,500,0.436,0.3,0.78,0.88,2
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,61,280,0.21785714285714286,0.18,0.86,0.84,2
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,154,650,0.23692307692307693,0.28,0.93,0.52,2
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,107,300,0.3566666666666667,0.44,0.7,0.54,2
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,152,500,0.304,0.34,0.74,0.82,2
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,119,550,0.21636363636363637,0.21,0.88,0.66,2
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,249,1000,0.249,0.31,0.76,0.55,2
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,243,800,0.30375,0.29,0.86,0.62,2
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,194,900,0.21555555555555556,0.99,0.45,0.45,2
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,113,550,0.20545454545454545,0.94,0.42,0.4,2
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,127,520,0.24423076923076922,0.9,0.46,0.42,2
@@ -458,6 +764,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,183,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,163,550,0.2963636363636364,0.21,0.88,0.66,2
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,221,1000,0.221,0.31,0.76,0.55,2
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,245,800,0.30625,0.29,0.86,0.62,2
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,151,900,0.16777777777777778,0.99,0.45,0.45,3
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,95,550,0.17272727272727273,0.94,0.42,0.4,3
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,124,520,0.23846153846153847,0.9,0.46,0.42,3
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,191,800,0.23875,0.92,0.62,0.5,3
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,455,1200,0.37916666666666665,0.88,0.35,0.55,3
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,302,700,0.43142857142857144,0.87,0.5,0.82,3
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,285,650,0.43846153846153846,0.84,0.5,0.48,3
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,360,1800,0.2,0.89,0.44,0.7,3
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,227,480,0.47291666666666665,0.8,0.55,0.52,3
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,252,500,0.504,0.76,0.58,0.55,3
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,253,1300,0.1946153846153846,0.74,0.83,0.56,3
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,325,1600,0.203125,0.82,0.57,0.64,3
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,129,400,0.3225,0.72,0.54,0.46,3
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,130,650,0.2,0.66,0.7,0.5,3
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,207,600,0.345,0.68,0.61,0.48,3
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,221,350,0.6314285714285715,0.58,0.62,0.45,3
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,200,700,0.2857142857142857,0.62,0.6,0.75,3
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,3
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,64,750,0.08533333333333333,0.77,0.38,0.43,3
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,185,260,0.7115384615384616,0.36,0.72,0.62,3
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,188,420,0.44761904761904764,0.55,0.78,0.58,3
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,61,800,0.07625,0.63,0.58,0.54,3
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,223,600,0.37166666666666665,0.61,0.7,0.5,3
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,242,500,0.484,0.65,0.66,0.42,3
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,113,450,0.2511111111111111,0.64,0.64,0.52,3
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,172,350,0.49142857142857144,0.32,0.88,0.64,3
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,272,650,0.41846153846153844,0.43,0.78,0.88,3
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,220,330,0.6666666666666666,0.45,0.7,0.55,3
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,311,700,0.4442857142857143,0.4,0.68,0.84,3
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,328,1200,0.2733333333333333,0.47,0.72,0.58,3
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,175,220,0.7954545454545454,0.24,0.73,0.62,3
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,232,700,0.3314285714285714,0.49,0.76,0.9,3
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,336,1600,0.21,0.83,0.43,0.62,3
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,377,750,0.5026666666666667,0.48,0.71,0.86,3
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,106,270,0.3925925925925926,0.46,0.62,0.5,3
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,239,500,0.478,0.5,0.75,0.72,3
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,146,390,0.37435897435897436,0.38,0.68,0.54,3
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,153,350,0.43714285714285717,0.42,0.72,0.64,3
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,148,260,0.5692307692307692,0.51,0.6,0.5,3
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,159,300,0.53,0.2,0.84,0.82,3
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,191,600,0.31833333333333336,0.22,0.8,0.86,3
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,330,700,0.4714285714285714,0.18,0.9,0.72,3
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,268,500,0.536,0.16,0.88,0.66,3
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,307,500,0.614,0.3,0.78,0.88,3
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,169,280,0.6035714285714285,0.18,0.86,0.84,3
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,235,650,0.36153846153846153,0.28,0.93,0.52,3
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,177,300,0.59,0.44,0.7,0.54,3
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,245,500,0.49,0.34,0.74,0.82,3
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,212,550,0.38545454545454544,0.21,0.88,0.66,3
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,275,1000,0.275,0.31,0.76,0.55,3
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,254,800,0.3175,0.29,0.86,0.62,3
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,772,900,0.8577777777777778,0.99,0.45,0.45,3
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,396,550,0.72,0.94,0.42,0.4,3
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,356,520,0.6846153846153846,0.9,0.46,0.42,3
@@ -560,6 +917,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,123,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,87,550,0.15818181818181817,0.21,0.88,0.66,3
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,237,1000,0.237,0.31,0.76,0.55,3
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,293,800,0.36625,0.29,0.86,0.62,3
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,293,900,0.32555555555555554,0.99,0.45,0.45,3
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,181,550,0.3290909090909091,0.94,0.42,0.4,3
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,175,520,0.33653846153846156,0.9,0.46,0.42,3
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,250,800,0.3125,0.92,0.62,0.5,3
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,566,1200,0.4716666666666667,0.88,0.35,0.55,3
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,297,700,0.42428571428571427,0.87,0.5,0.82,3
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,265,650,0.4076923076923077,0.84,0.5,0.48,3
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,710,1800,0.39444444444444443,0.89,0.44,0.7,3
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,197,480,0.41041666666666665,0.8,0.55,0.52,3
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,199,500,0.398,0.76,0.58,0.55,3
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,406,1300,0.3123076923076923,0.74,0.83,0.56,3
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,537,1600,0.335625,0.82,0.57,0.64,3
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,133,400,0.3325,0.72,0.54,0.46,3
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,163,650,0.25076923076923074,0.66,0.7,0.5,3
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,201,600,0.335,0.68,0.61,0.48,3
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,126,350,0.36,0.58,0.62,0.45,3
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,231,700,0.33,0.62,0.6,0.75,3
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,3
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,134,750,0.17866666666666667,0.77,0.38,0.43,3
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,83,260,0.3192307692307692,0.36,0.72,0.62,3
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,92,420,0.21904761904761905,0.55,0.78,0.58,3
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,151,800,0.18875,0.63,0.58,0.54,3
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,187,600,0.31166666666666665,0.61,0.7,0.5,3
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,111,500,0.222,0.65,0.66,0.42,3
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,132,450,0.29333333333333333,0.64,0.64,0.52,3
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,67,350,0.19142857142857142,0.32,0.88,0.64,3
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,198,650,0.3046153846153846,0.43,0.78,0.88,3
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,114,330,0.34545454545454546,0.45,0.7,0.55,3
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,266,700,0.38,0.4,0.68,0.84,3
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,387,1200,0.3225,0.47,0.72,0.58,3
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,78,220,0.35454545454545455,0.24,0.73,0.62,3
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,235,700,0.3357142857142857,0.49,0.76,0.9,3
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,609,1600,0.380625,0.83,0.43,0.62,3
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,284,750,0.37866666666666665,0.48,0.71,0.86,3
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,72,270,0.26666666666666666,0.46,0.62,0.5,3
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,163,500,0.326,0.5,0.75,0.72,3
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,102,390,0.26153846153846155,0.38,0.68,0.54,3
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,95,350,0.2714285714285714,0.42,0.72,0.64,3
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,82,260,0.3153846153846154,0.51,0.6,0.5,3
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,48,300,0.16,0.2,0.84,0.82,3
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,127,600,0.21166666666666667,0.22,0.8,0.86,3
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,193,700,0.2757142857142857,0.18,0.9,0.72,3
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,136,500,0.272,0.16,0.88,0.66,3
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,214,500,0.428,0.3,0.78,0.88,3
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,56,280,0.2,0.18,0.86,0.84,3
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,157,650,0.24153846153846154,0.28,0.93,0.52,3
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,110,300,0.36666666666666664,0.44,0.7,0.54,3
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,153,500,0.306,0.34,0.74,0.82,3
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,119,550,0.21636363636363637,0.21,0.88,0.66,3
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,260,1000,0.26,0.31,0.76,0.55,3
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,251,800,0.31375,0.29,0.86,0.62,3
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,202,900,0.22444444444444445,0.99,0.45,0.45,3
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,113,550,0.20545454545454545,0.94,0.42,0.4,3
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,133,520,0.25576923076923075,0.9,0.46,0.42,3
@@ -611,6 +1019,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,182,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,162,550,0.29454545454545455,0.21,0.88,0.66,3
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,239,1000,0.239,0.31,0.76,0.55,3
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,252,800,0.315,0.29,0.86,0.62,3
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,136,900,0.1511111111111111,0.99,0.45,0.45,4
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,110,550,0.2,0.94,0.42,0.4,4
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,120,520,0.23076923076923078,0.9,0.46,0.42,4
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,179,800,0.22375,0.92,0.62,0.5,4
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,442,1200,0.36833333333333335,0.88,0.35,0.55,4
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,310,700,0.44285714285714284,0.87,0.5,0.82,4
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,270,650,0.4153846153846154,0.84,0.5,0.48,4
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,337,1800,0.18722222222222223,0.89,0.44,0.7,4
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,215,480,0.4479166666666667,0.8,0.55,0.52,4
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,281,500,0.562,0.76,0.58,0.55,4
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,268,1300,0.20615384615384616,0.74,0.83,0.56,4
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,312,1600,0.195,0.82,0.57,0.64,4
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,135,400,0.3375,0.72,0.54,0.46,4
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,155,650,0.23846153846153847,0.66,0.7,0.5,4
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,168,600,0.28,0.68,0.61,0.48,4
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,192,350,0.5485714285714286,0.58,0.62,0.45,4
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,231,700,0.33,0.62,0.6,0.75,4
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,4
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,53,750,0.07066666666666667,0.77,0.38,0.43,4
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,181,260,0.6961538461538461,0.36,0.72,0.62,4
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,177,420,0.42142857142857143,0.55,0.78,0.58,4
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,65,800,0.08125,0.63,0.58,0.54,4
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,275,600,0.4583333333333333,0.61,0.7,0.5,4
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,213,500,0.426,0.65,0.66,0.42,4
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,106,450,0.23555555555555555,0.64,0.64,0.52,4
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,166,350,0.4742857142857143,0.32,0.88,0.64,4
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,272,650,0.41846153846153844,0.43,0.78,0.88,4
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,202,330,0.6121212121212121,0.45,0.7,0.55,4
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,309,700,0.44142857142857145,0.4,0.68,0.84,4
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,353,1200,0.2941666666666667,0.47,0.72,0.58,4
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,183,220,0.8318181818181818,0.24,0.73,0.62,4
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,241,700,0.3442857142857143,0.49,0.76,0.9,4
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,311,1600,0.194375,0.83,0.43,0.62,4
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,357,750,0.476,0.48,0.71,0.86,4
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,100,270,0.37037037037037035,0.46,0.62,0.5,4
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,232,500,0.464,0.5,0.75,0.72,4
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,143,390,0.36666666666666664,0.38,0.68,0.54,4
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,152,350,0.4342857142857143,0.42,0.72,0.64,4
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,139,260,0.5346153846153846,0.51,0.6,0.5,4
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,157,300,0.5233333333333333,0.2,0.84,0.82,4
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,215,600,0.35833333333333334,0.22,0.8,0.86,4
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,310,700,0.44285714285714284,0.18,0.9,0.72,4
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,265,500,0.53,0.16,0.88,0.66,4
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,317,500,0.634,0.3,0.78,0.88,4
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,165,280,0.5892857142857143,0.18,0.86,0.84,4
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,221,650,0.34,0.28,0.93,0.52,4
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,213,300,0.71,0.44,0.7,0.54,4
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,244,500,0.488,0.34,0.74,0.82,4
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,222,550,0.4036363636363636,0.21,0.88,0.66,4
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,276,1000,0.276,0.31,0.76,0.55,4
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,269,800,0.33625,0.29,0.86,0.62,4
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,788,900,0.8755555555555555,0.99,0.45,0.45,4
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,415,550,0.7545454545454545,0.94,0.42,0.4,4
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,368,520,0.7076923076923077,0.9,0.46,0.42,4
@@ -713,6 +1172,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,135,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,84,550,0.15272727272727274,0.21,0.88,0.66,4
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,250,1000,0.25,0.31,0.76,0.55,4
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,292,800,0.365,0.29,0.86,0.62,4
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,301,900,0.33444444444444443,0.99,0.45,0.45,4
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,182,550,0.33090909090909093,0.94,0.42,0.4,4
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,180,520,0.34615384615384615,0.9,0.46,0.42,4
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,246,800,0.3075,0.92,0.62,0.5,4
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,567,1200,0.4725,0.88,0.35,0.55,4
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,295,700,0.42142857142857143,0.87,0.5,0.82,4
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,262,650,0.40307692307692305,0.84,0.5,0.48,4
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,706,1800,0.39222222222222225,0.89,0.44,0.7,4
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,191,480,0.39791666666666664,0.8,0.55,0.52,4
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,202,500,0.404,0.76,0.58,0.55,4
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,404,1300,0.31076923076923074,0.74,0.83,0.56,4
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,531,1600,0.331875,0.82,0.57,0.64,4
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,133,400,0.3325,0.72,0.54,0.46,4
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,156,650,0.24,0.66,0.7,0.5,4
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,199,600,0.33166666666666667,0.68,0.61,0.48,4
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,126,350,0.36,0.58,0.62,0.45,4
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,238,700,0.34,0.62,0.6,0.75,4
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,4
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,131,750,0.17466666666666666,0.77,0.38,0.43,4
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,84,260,0.3230769230769231,0.36,0.72,0.62,4
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,93,420,0.22142857142857142,0.55,0.78,0.58,4
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,152,800,0.19,0.63,0.58,0.54,4
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,189,600,0.315,0.61,0.7,0.5,4
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,110,500,0.22,0.65,0.66,0.42,4
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,128,450,0.28444444444444444,0.64,0.64,0.52,4
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,69,350,0.19714285714285715,0.32,0.88,0.64,4
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,204,650,0.31384615384615383,0.43,0.78,0.88,4
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,111,330,0.33636363636363636,0.45,0.7,0.55,4
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,265,700,0.37857142857142856,0.4,0.68,0.84,4
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,372,1200,0.31,0.47,0.72,0.58,4
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,75,220,0.3409090909090909,0.24,0.73,0.62,4
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,235,700,0.3357142857142857,0.49,0.76,0.9,4
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,598,1600,0.37375,0.83,0.43,0.62,4
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,280,750,0.37333333333333335,0.48,0.71,0.86,4
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,69,270,0.25555555555555554,0.46,0.62,0.5,4
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,173,500,0.346,0.5,0.75,0.72,4
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,104,390,0.26666666666666666,0.38,0.68,0.54,4
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,96,350,0.2742857142857143,0.42,0.72,0.64,4
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,80,260,0.3076923076923077,0.51,0.6,0.5,4
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,47,300,0.15666666666666668,0.2,0.84,0.82,4
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,124,600,0.20666666666666667,0.22,0.8,0.86,4
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,183,700,0.26142857142857145,0.18,0.9,0.72,4
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,141,500,0.282,0.16,0.88,0.66,4
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,214,500,0.428,0.3,0.78,0.88,4
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,59,280,0.21071428571428572,0.18,0.86,0.84,4
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,158,650,0.24307692307692308,0.28,0.93,0.52,4
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,113,300,0.37666666666666665,0.44,0.7,0.54,4
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,151,500,0.302,0.34,0.74,0.82,4
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,119,550,0.21636363636363637,0.21,0.88,0.66,4
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,251,1000,0.251,0.31,0.76,0.55,4
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,243,800,0.30375,0.29,0.86,0.62,4
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,204,900,0.22666666666666666,0.99,0.45,0.45,4
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,105,550,0.19090909090909092,0.94,0.42,0.4,4
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,121,520,0.2326923076923077,0.9,0.46,0.42,4
@@ -764,6 +1274,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,185,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,164,550,0.29818181818181816,0.21,0.88,0.66,4
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,229,1000,0.229,0.31,0.76,0.55,4
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,249,800,0.31125,0.29,0.86,0.62,4
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,137,900,0.15222222222222223,0.99,0.45,0.45,5
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,108,550,0.19636363636363635,0.94,0.42,0.4,5
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,127,520,0.24423076923076922,0.9,0.46,0.42,5
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,165,800,0.20625,0.92,0.62,0.5,5
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,439,1200,0.36583333333333334,0.88,0.35,0.55,5
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,328,700,0.4685714285714286,0.87,0.5,0.82,5
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,289,650,0.44461538461538463,0.84,0.5,0.48,5
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,371,1800,0.2061111111111111,0.89,0.44,0.7,5
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,237,480,0.49375,0.8,0.55,0.52,5
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,270,500,0.54,0.76,0.58,0.55,5
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,227,1300,0.17461538461538462,0.74,0.83,0.56,5
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,311,1600,0.194375,0.82,0.57,0.64,5
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,132,400,0.33,0.72,0.54,0.46,5
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,146,650,0.2246153846153846,0.66,0.7,0.5,5
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,178,600,0.2966666666666667,0.68,0.61,0.48,5
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,202,350,0.5771428571428572,0.58,0.62,0.45,5
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,218,700,0.31142857142857144,0.62,0.6,0.75,5
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,5
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,61,750,0.08133333333333333,0.77,0.38,0.43,5
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,198,260,0.7615384615384615,0.36,0.72,0.62,5
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,178,420,0.4238095238095238,0.55,0.78,0.58,5
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,82,800,0.1025,0.63,0.58,0.54,5
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,250,600,0.4166666666666667,0.61,0.7,0.5,5
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,202,500,0.404,0.65,0.66,0.42,5
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,130,450,0.28888888888888886,0.64,0.64,0.52,5
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,173,350,0.4942857142857143,0.32,0.88,0.64,5
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,260,650,0.4,0.43,0.78,0.88,5
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,215,330,0.6515151515151515,0.45,0.7,0.55,5
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,292,700,0.41714285714285715,0.4,0.68,0.84,5
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,327,1200,0.2725,0.47,0.72,0.58,5
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,201,220,0.9136363636363637,0.24,0.73,0.62,5
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,229,700,0.3271428571428571,0.49,0.76,0.9,5
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,307,1600,0.191875,0.83,0.43,0.62,5
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,364,750,0.48533333333333334,0.48,0.71,0.86,5
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,95,270,0.35185185185185186,0.46,0.62,0.5,5
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,238,500,0.476,0.5,0.75,0.72,5
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,136,390,0.3487179487179487,0.38,0.68,0.54,5
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,172,350,0.49142857142857144,0.42,0.72,0.64,5
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,152,260,0.5846153846153846,0.51,0.6,0.5,5
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,160,300,0.5333333333333333,0.2,0.84,0.82,5
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,249,600,0.415,0.22,0.8,0.86,5
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,327,700,0.46714285714285714,0.18,0.9,0.72,5
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,260,500,0.52,0.16,0.88,0.66,5
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,327,500,0.654,0.3,0.78,0.88,5
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,152,280,0.5428571428571428,0.18,0.86,0.84,5
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,232,650,0.3569230769230769,0.28,0.93,0.52,5
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,187,300,0.6233333333333333,0.44,0.7,0.54,5
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,227,500,0.454,0.34,0.74,0.82,5
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,220,550,0.4,0.21,0.88,0.66,5
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,248,1000,0.248,0.31,0.76,0.55,5
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,266,800,0.3325,0.29,0.86,0.62,5
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,796,900,0.8844444444444445,0.99,0.45,0.45,5
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,408,550,0.7418181818181818,0.94,0.42,0.4,5
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,372,520,0.7153846153846154,0.9,0.46,0.42,5
@@ -866,6 +1427,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,139,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,76,550,0.13818181818181818,0.21,0.88,0.66,5
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,240,1000,0.24,0.31,0.76,0.55,5
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,279,800,0.34875,0.29,0.86,0.62,5
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,299,900,0.3322222222222222,0.99,0.45,0.45,5
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,176,550,0.32,0.94,0.42,0.4,5
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,176,520,0.3384615384615385,0.9,0.46,0.42,5
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,246,800,0.3075,0.92,0.62,0.5,5
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,566,1200,0.4716666666666667,0.88,0.35,0.55,5
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,288,700,0.4114285714285714,0.87,0.5,0.82,5
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,263,650,0.4046153846153846,0.84,0.5,0.48,5
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,728,1800,0.40444444444444444,0.89,0.44,0.7,5
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,192,480,0.4,0.8,0.55,0.52,5
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,200,500,0.4,0.76,0.58,0.55,5
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,405,1300,0.31153846153846154,0.74,0.83,0.56,5
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,529,1600,0.330625,0.82,0.57,0.64,5
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,137,400,0.3425,0.72,0.54,0.46,5
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,156,650,0.24,0.66,0.7,0.5,5
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,202,600,0.33666666666666667,0.68,0.61,0.48,5
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,123,350,0.3514285714285714,0.58,0.62,0.45,5
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,232,700,0.3314285714285714,0.62,0.6,0.75,5
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,5
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,127,750,0.16933333333333334,0.77,0.38,0.43,5
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,86,260,0.33076923076923076,0.36,0.72,0.62,5
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,94,420,0.22380952380952382,0.55,0.78,0.58,5
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,139,800,0.17375,0.63,0.58,0.54,5
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,180,600,0.3,0.61,0.7,0.5,5
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,111,500,0.222,0.65,0.66,0.42,5
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,125,450,0.2777777777777778,0.64,0.64,0.52,5
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,71,350,0.20285714285714285,0.32,0.88,0.64,5
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,199,650,0.30615384615384617,0.43,0.78,0.88,5
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,112,330,0.3393939393939394,0.45,0.7,0.55,5
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,268,700,0.38285714285714284,0.4,0.68,0.84,5
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,382,1200,0.31833333333333336,0.47,0.72,0.58,5
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,82,220,0.37272727272727274,0.24,0.73,0.62,5
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,234,700,0.3342857142857143,0.49,0.76,0.9,5
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,609,1600,0.380625,0.83,0.43,0.62,5
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,290,750,0.38666666666666666,0.48,0.71,0.86,5
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,69,270,0.25555555555555554,0.46,0.62,0.5,5
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,166,500,0.332,0.5,0.75,0.72,5
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,97,390,0.24871794871794872,0.38,0.68,0.54,5
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,95,350,0.2714285714285714,0.42,0.72,0.64,5
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,87,260,0.3346153846153846,0.51,0.6,0.5,5
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,45,300,0.15,0.2,0.84,0.82,5
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,122,600,0.20333333333333334,0.22,0.8,0.86,5
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,187,700,0.2671428571428571,0.18,0.9,0.72,5
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,134,500,0.268,0.16,0.88,0.66,5
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,222,500,0.444,0.3,0.78,0.88,5
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,57,280,0.20357142857142857,0.18,0.86,0.84,5
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,150,650,0.23076923076923078,0.28,0.93,0.52,5
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,111,300,0.37,0.44,0.7,0.54,5
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,156,500,0.312,0.34,0.74,0.82,5
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,116,550,0.2109090909090909,0.21,0.88,0.66,5
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,248,1000,0.248,0.31,0.76,0.55,5
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,239,800,0.29875,0.29,0.86,0.62,5
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,202,900,0.22444444444444445,0.99,0.45,0.45,5
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,107,550,0.19454545454545455,0.94,0.42,0.4,5
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,125,520,0.2403846153846154,0.9,0.46,0.42,5
@@ -917,6 +1529,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,182,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,165,550,0.3,0.21,0.88,0.66,5
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,230,1000,0.23,0.31,0.76,0.55,5
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,249,800,0.31125,0.29,0.86,0.62,5
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,124,900,0.13777777777777778,0.99,0.45,0.45,6
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,100,550,0.18181818181818182,0.94,0.42,0.4,6
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,112,520,0.2153846153846154,0.9,0.46,0.42,6
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,172,800,0.215,0.92,0.62,0.5,6
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,468,1200,0.39,0.88,0.35,0.55,6
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,326,700,0.4657142857142857,0.87,0.5,0.82,6
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,250,650,0.38461538461538464,0.84,0.5,0.48,6
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,356,1800,0.19777777777777777,0.89,0.44,0.7,6
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,222,480,0.4625,0.8,0.55,0.52,6
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,226,500,0.452,0.76,0.58,0.55,6
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,247,1300,0.19,0.74,0.83,0.56,6
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,335,1600,0.209375,0.82,0.57,0.64,6
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,134,400,0.335,0.72,0.54,0.46,6
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,140,650,0.2153846153846154,0.66,0.7,0.5,6
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,177,600,0.295,0.68,0.61,0.48,6
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,193,350,0.5514285714285714,0.58,0.62,0.45,6
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,218,700,0.31142857142857144,0.62,0.6,0.75,6
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,6
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,60,750,0.08,0.77,0.38,0.43,6
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,175,260,0.6730769230769231,0.36,0.72,0.62,6
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,188,420,0.44761904761904764,0.55,0.78,0.58,6
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,103,800,0.12875,0.63,0.58,0.54,6
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,238,600,0.39666666666666667,0.61,0.7,0.5,6
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,205,500,0.41,0.65,0.66,0.42,6
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,107,450,0.23777777777777778,0.64,0.64,0.52,6
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,164,350,0.4685714285714286,0.32,0.88,0.64,6
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,267,650,0.4107692307692308,0.43,0.78,0.88,6
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,218,330,0.6606060606060606,0.45,0.7,0.55,6
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,323,700,0.4614285714285714,0.4,0.68,0.84,6
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,332,1200,0.27666666666666667,0.47,0.72,0.58,6
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,177,220,0.8045454545454546,0.24,0.73,0.62,6
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,265,700,0.37857142857142856,0.49,0.76,0.9,6
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,306,1600,0.19125,0.83,0.43,0.62,6
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,382,750,0.5093333333333333,0.48,0.71,0.86,6
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,104,270,0.3851851851851852,0.46,0.62,0.5,6
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,233,500,0.466,0.5,0.75,0.72,6
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,144,390,0.36923076923076925,0.38,0.68,0.54,6
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,189,350,0.54,0.42,0.72,0.64,6
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,140,260,0.5384615384615384,0.51,0.6,0.5,6
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,160,300,0.5333333333333333,0.2,0.84,0.82,6
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,207,600,0.345,0.22,0.8,0.86,6
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,331,700,0.47285714285714286,0.18,0.9,0.72,6
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,270,500,0.54,0.16,0.88,0.66,6
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,298,500,0.596,0.3,0.78,0.88,6
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,167,280,0.5964285714285714,0.18,0.86,0.84,6
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,237,650,0.3646153846153846,0.28,0.93,0.52,6
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,192,300,0.64,0.44,0.7,0.54,6
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,227,500,0.454,0.34,0.74,0.82,6
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,194,550,0.3527272727272727,0.21,0.88,0.66,6
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,273,1000,0.273,0.31,0.76,0.55,6
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,272,800,0.34,0.29,0.86,0.62,6
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,779,900,0.8655555555555555,0.99,0.45,0.45,6
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,403,550,0.7327272727272728,0.94,0.42,0.4,6
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,366,520,0.7038461538461539,0.9,0.46,0.42,6
@@ -1019,6 +1682,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,130,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,80,550,0.14545454545454545,0.21,0.88,0.66,6
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,238,1000,0.238,0.31,0.76,0.55,6
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,284,800,0.355,0.29,0.86,0.62,6
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,285,900,0.31666666666666665,0.99,0.45,0.45,6
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,177,550,0.32181818181818184,0.94,0.42,0.4,6
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,169,520,0.325,0.9,0.46,0.42,6
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,240,800,0.3,0.92,0.62,0.5,6
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,573,1200,0.4775,0.88,0.35,0.55,6
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,294,700,0.42,0.87,0.5,0.82,6
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,260,650,0.4,0.84,0.5,0.48,6
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,709,1800,0.3938888888888889,0.89,0.44,0.7,6
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,186,480,0.3875,0.8,0.55,0.52,6
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,196,500,0.392,0.76,0.58,0.55,6
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,393,1300,0.30230769230769233,0.74,0.83,0.56,6
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,521,1600,0.325625,0.82,0.57,0.64,6
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,126,400,0.315,0.72,0.54,0.46,6
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,158,650,0.24307692307692308,0.66,0.7,0.5,6
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,194,600,0.3233333333333333,0.68,0.61,0.48,6
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,141,350,0.40285714285714286,0.58,0.62,0.45,6
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,235,700,0.3357142857142857,0.62,0.6,0.75,6
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,6
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,129,750,0.172,0.77,0.38,0.43,6
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,75,260,0.28846153846153844,0.36,0.72,0.62,6
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,92,420,0.21904761904761905,0.55,0.78,0.58,6
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,158,800,0.1975,0.63,0.58,0.54,6
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,190,600,0.31666666666666665,0.61,0.7,0.5,6
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,108,500,0.216,0.65,0.66,0.42,6
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,126,450,0.28,0.64,0.64,0.52,6
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,66,350,0.18857142857142858,0.32,0.88,0.64,6
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,205,650,0.3153846153846154,0.43,0.78,0.88,6
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,119,330,0.3606060606060606,0.45,0.7,0.55,6
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,268,700,0.38285714285714284,0.4,0.68,0.84,6
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,374,1200,0.31166666666666665,0.47,0.72,0.58,6
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,82,220,0.37272727272727274,0.24,0.73,0.62,6
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,230,700,0.32857142857142857,0.49,0.76,0.9,6
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,606,1600,0.37875,0.83,0.43,0.62,6
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,295,750,0.3933333333333333,0.48,0.71,0.86,6
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,67,270,0.24814814814814815,0.46,0.62,0.5,6
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,174,500,0.348,0.5,0.75,0.72,6
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,98,390,0.2512820512820513,0.38,0.68,0.54,6
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,92,350,0.26285714285714284,0.42,0.72,0.64,6
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,81,260,0.31153846153846154,0.51,0.6,0.5,6
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,45,300,0.15,0.2,0.84,0.82,6
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,126,600,0.21,0.22,0.8,0.86,6
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,187,700,0.2671428571428571,0.18,0.9,0.72,6
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,140,500,0.28,0.16,0.88,0.66,6
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,226,500,0.452,0.3,0.78,0.88,6
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,59,280,0.21071428571428572,0.18,0.86,0.84,6
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,157,650,0.24153846153846154,0.28,0.93,0.52,6
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,111,300,0.37,0.44,0.7,0.54,6
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,150,500,0.3,0.34,0.74,0.82,6
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,111,550,0.2018181818181818,0.21,0.88,0.66,6
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,254,1000,0.254,0.31,0.76,0.55,6
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,252,800,0.315,0.29,0.86,0.62,6
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,197,900,0.21888888888888888,0.99,0.45,0.45,6
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,107,550,0.19454545454545455,0.94,0.42,0.4,6
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,121,520,0.2326923076923077,0.9,0.46,0.42,6
@@ -1070,6 +1784,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,182,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,161,550,0.2927272727272727,0.21,0.88,0.66,6
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,233,1000,0.233,0.31,0.76,0.55,6
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,246,800,0.3075,0.29,0.86,0.62,6
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,144,900,0.16,0.99,0.45,0.45,7
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,95,550,0.17272727272727273,0.94,0.42,0.4,7
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,129,520,0.24807692307692308,0.9,0.46,0.42,7
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,166,800,0.2075,0.92,0.62,0.5,7
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,445,1200,0.37083333333333335,0.88,0.35,0.55,7
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,342,700,0.48857142857142855,0.87,0.5,0.82,7
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,273,650,0.42,0.84,0.5,0.48,7
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,356,1800,0.19777777777777777,0.89,0.44,0.7,7
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,230,480,0.4791666666666667,0.8,0.55,0.52,7
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,257,500,0.514,0.76,0.58,0.55,7
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,265,1300,0.20384615384615384,0.74,0.83,0.56,7
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,293,1600,0.183125,0.82,0.57,0.64,7
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,145,400,0.3625,0.72,0.54,0.46,7
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,143,650,0.22,0.66,0.7,0.5,7
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,177,600,0.295,0.68,0.61,0.48,7
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,192,350,0.5485714285714286,0.58,0.62,0.45,7
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,213,700,0.30428571428571427,0.62,0.6,0.75,7
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,7
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,80,750,0.10666666666666667,0.77,0.38,0.43,7
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,185,260,0.7115384615384616,0.36,0.72,0.62,7
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,163,420,0.3880952380952381,0.55,0.78,0.58,7
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,75,800,0.09375,0.63,0.58,0.54,7
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,217,600,0.3616666666666667,0.61,0.7,0.5,7
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,208,500,0.416,0.65,0.66,0.42,7
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,117,450,0.26,0.64,0.64,0.52,7
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,169,350,0.4828571428571429,0.32,0.88,0.64,7
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,257,650,0.3953846153846154,0.43,0.78,0.88,7
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,219,330,0.6636363636363637,0.45,0.7,0.55,7
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,321,700,0.4585714285714286,0.4,0.68,0.84,7
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,330,1200,0.275,0.47,0.72,0.58,7
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,197,220,0.8954545454545455,0.24,0.73,0.62,7
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,259,700,0.37,0.49,0.76,0.9,7
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,324,1600,0.2025,0.83,0.43,0.62,7
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,379,750,0.5053333333333333,0.48,0.71,0.86,7
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,104,270,0.3851851851851852,0.46,0.62,0.5,7
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,238,500,0.476,0.5,0.75,0.72,7
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,134,390,0.3435897435897436,0.38,0.68,0.54,7
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,163,350,0.4657142857142857,0.42,0.72,0.64,7
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,136,260,0.5230769230769231,0.51,0.6,0.5,7
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,165,300,0.55,0.2,0.84,0.82,7
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,227,600,0.37833333333333335,0.22,0.8,0.86,7
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,314,700,0.44857142857142857,0.18,0.9,0.72,7
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,257,500,0.514,0.16,0.88,0.66,7
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,339,500,0.678,0.3,0.78,0.88,7
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,156,280,0.5571428571428572,0.18,0.86,0.84,7
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,227,650,0.34923076923076923,0.28,0.93,0.52,7
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,203,300,0.6766666666666666,0.44,0.7,0.54,7
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,230,500,0.46,0.34,0.74,0.82,7
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,228,550,0.41454545454545455,0.21,0.88,0.66,7
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,279,1000,0.279,0.31,0.76,0.55,7
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,248,800,0.31,0.29,0.86,0.62,7
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,767,900,0.8522222222222222,0.99,0.45,0.45,7
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,382,550,0.6945454545454546,0.94,0.42,0.4,7
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,357,520,0.6865384615384615,0.9,0.46,0.42,7
@@ -1172,6 +1937,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,134,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,78,550,0.14181818181818182,0.21,0.88,0.66,7
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,218,1000,0.218,0.31,0.76,0.55,7
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,274,800,0.3425,0.29,0.86,0.62,7
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,299,900,0.3322222222222222,0.99,0.45,0.45,7
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,179,550,0.32545454545454544,0.94,0.42,0.4,7
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,176,520,0.3384615384615385,0.9,0.46,0.42,7
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,248,800,0.31,0.92,0.62,0.5,7
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,566,1200,0.4716666666666667,0.88,0.35,0.55,7
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,298,700,0.4257142857142857,0.87,0.5,0.82,7
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,272,650,0.41846153846153844,0.84,0.5,0.48,7
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,718,1800,0.3988888888888889,0.89,0.44,0.7,7
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,198,480,0.4125,0.8,0.55,0.52,7
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,201,500,0.402,0.76,0.58,0.55,7
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,396,1300,0.3046153846153846,0.74,0.83,0.56,7
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,525,1600,0.328125,0.82,0.57,0.64,7
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,136,400,0.34,0.72,0.54,0.46,7
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,156,650,0.24,0.66,0.7,0.5,7
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,202,600,0.33666666666666667,0.68,0.61,0.48,7
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,124,350,0.35428571428571426,0.58,0.62,0.45,7
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,237,700,0.3385714285714286,0.62,0.6,0.75,7
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,7
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,132,750,0.176,0.77,0.38,0.43,7
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,76,260,0.2923076923076923,0.36,0.72,0.62,7
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,87,420,0.20714285714285716,0.55,0.78,0.58,7
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,148,800,0.185,0.63,0.58,0.54,7
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,192,600,0.32,0.61,0.7,0.5,7
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,107,500,0.214,0.65,0.66,0.42,7
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,133,450,0.29555555555555557,0.64,0.64,0.52,7
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,68,350,0.19428571428571428,0.32,0.88,0.64,7
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,205,650,0.3153846153846154,0.43,0.78,0.88,7
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,115,330,0.3484848484848485,0.45,0.7,0.55,7
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,268,700,0.38285714285714284,0.4,0.68,0.84,7
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,370,1200,0.30833333333333335,0.47,0.72,0.58,7
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,83,220,0.37727272727272726,0.24,0.73,0.62,7
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,233,700,0.33285714285714285,0.49,0.76,0.9,7
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,609,1600,0.380625,0.83,0.43,0.62,7
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,295,750,0.3933333333333333,0.48,0.71,0.86,7
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,70,270,0.25925925925925924,0.46,0.62,0.5,7
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,171,500,0.342,0.5,0.75,0.72,7
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,98,390,0.2512820512820513,0.38,0.68,0.54,7
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,90,350,0.2571428571428571,0.42,0.72,0.64,7
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,83,260,0.3192307692307692,0.51,0.6,0.5,7
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,47,300,0.15666666666666668,0.2,0.84,0.82,7
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,125,600,0.20833333333333334,0.22,0.8,0.86,7
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,183,700,0.26142857142857145,0.18,0.9,0.72,7
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,134,500,0.268,0.16,0.88,0.66,7
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,212,500,0.424,0.3,0.78,0.88,7
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,56,280,0.2,0.18,0.86,0.84,7
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,146,650,0.2246153846153846,0.28,0.93,0.52,7
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,110,300,0.36666666666666664,0.44,0.7,0.54,7
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,153,500,0.306,0.34,0.74,0.82,7
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,115,550,0.20909090909090908,0.21,0.88,0.66,7
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,240,1000,0.24,0.31,0.76,0.55,7
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,235,800,0.29375,0.29,0.86,0.62,7
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,200,900,0.2222222222222222,0.99,0.45,0.45,7
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,106,550,0.19272727272727272,0.94,0.42,0.4,7
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,127,520,0.24423076923076922,0.9,0.46,0.42,7
@@ -1223,6 +2039,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,186,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,156,550,0.28363636363636363,0.21,0.88,0.66,7
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,216,1000,0.216,0.31,0.76,0.55,7
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,249,800,0.31125,0.29,0.86,0.62,7
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,139,900,0.15444444444444444,0.99,0.45,0.45,8
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,113,550,0.20545454545454545,0.94,0.42,0.4,8
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,124,520,0.23846153846153847,0.9,0.46,0.42,8
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,170,800,0.2125,0.92,0.62,0.5,8
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,446,1200,0.37166666666666665,0.88,0.35,0.55,8
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,320,700,0.45714285714285713,0.87,0.5,0.82,8
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,277,650,0.42615384615384616,0.84,0.5,0.48,8
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,342,1800,0.19,0.89,0.44,0.7,8
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,242,480,0.5041666666666667,0.8,0.55,0.52,8
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,268,500,0.536,0.76,0.58,0.55,8
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,257,1300,0.1976923076923077,0.74,0.83,0.56,8
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,260,1600,0.1625,0.82,0.57,0.64,8
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,145,400,0.3625,0.72,0.54,0.46,8
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,147,650,0.22615384615384615,0.66,0.7,0.5,8
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,167,600,0.2783333333333333,0.68,0.61,0.48,8
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,200,350,0.5714285714285714,0.58,0.62,0.45,8
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,206,700,0.29428571428571426,0.62,0.6,0.75,8
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,8
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,57,750,0.076,0.77,0.38,0.43,8
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,185,260,0.7115384615384616,0.36,0.72,0.62,8
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,187,420,0.4452380952380952,0.55,0.78,0.58,8
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,92,800,0.115,0.63,0.58,0.54,8
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,258,600,0.43,0.61,0.7,0.5,8
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,215,500,0.43,0.65,0.66,0.42,8
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,125,450,0.2777777777777778,0.64,0.64,0.52,8
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,168,350,0.48,0.32,0.88,0.64,8
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,270,650,0.4153846153846154,0.43,0.78,0.88,8
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,220,330,0.6666666666666666,0.45,0.7,0.55,8
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,288,700,0.4114285714285714,0.4,0.68,0.84,8
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,293,1200,0.24416666666666667,0.47,0.72,0.58,8
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,192,220,0.8727272727272727,0.24,0.73,0.62,8
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,248,700,0.35428571428571426,0.49,0.76,0.9,8
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,328,1600,0.205,0.83,0.43,0.62,8
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,370,750,0.49333333333333335,0.48,0.71,0.86,8
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,107,270,0.3962962962962963,0.46,0.62,0.5,8
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,254,500,0.508,0.5,0.75,0.72,8
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,155,390,0.3974358974358974,0.38,0.68,0.54,8
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,183,350,0.5228571428571429,0.42,0.72,0.64,8
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,133,260,0.5115384615384615,0.51,0.6,0.5,8
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,167,300,0.5566666666666666,0.2,0.84,0.82,8
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,229,600,0.38166666666666665,0.22,0.8,0.86,8
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,315,700,0.45,0.18,0.9,0.72,8
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,261,500,0.522,0.16,0.88,0.66,8
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,324,500,0.648,0.3,0.78,0.88,8
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,156,280,0.5571428571428572,0.18,0.86,0.84,8
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,216,650,0.3323076923076923,0.28,0.93,0.52,8
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,193,300,0.6433333333333333,0.44,0.7,0.54,8
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,238,500,0.476,0.34,0.74,0.82,8
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,226,550,0.4109090909090909,0.21,0.88,0.66,8
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,284,1000,0.284,0.31,0.76,0.55,8
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,249,800,0.31125,0.29,0.86,0.62,8
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,810,900,0.9,0.99,0.45,0.45,8
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,407,550,0.74,0.94,0.42,0.4,8
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,374,520,0.7192307692307692,0.9,0.46,0.42,8
@@ -1325,6 +2192,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,123,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,80,550,0.14545454545454545,0.21,0.88,0.66,8
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,220,1000,0.22,0.31,0.76,0.55,8
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,282,800,0.3525,0.29,0.86,0.62,8
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,293,900,0.32555555555555554,0.99,0.45,0.45,8
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,181,550,0.3290909090909091,0.94,0.42,0.4,8
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,178,520,0.3423076923076923,0.9,0.46,0.42,8
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,247,800,0.30875,0.92,0.62,0.5,8
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,550,1200,0.4583333333333333,0.88,0.35,0.55,8
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,295,700,0.42142857142857143,0.87,0.5,0.82,8
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,267,650,0.4107692307692308,0.84,0.5,0.48,8
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,721,1800,0.40055555555555555,0.89,0.44,0.7,8
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,198,480,0.4125,0.8,0.55,0.52,8
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,202,500,0.404,0.76,0.58,0.55,8
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,405,1300,0.31153846153846154,0.74,0.83,0.56,8
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,507,1600,0.316875,0.82,0.57,0.64,8
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,137,400,0.3425,0.72,0.54,0.46,8
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,159,650,0.24461538461538462,0.66,0.7,0.5,8
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,204,600,0.34,0.68,0.61,0.48,8
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,123,350,0.3514285714285714,0.58,0.62,0.45,8
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,242,700,0.3457142857142857,0.62,0.6,0.75,8
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,8
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,133,750,0.17733333333333334,0.77,0.38,0.43,8
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,88,260,0.3384615384615385,0.36,0.72,0.62,8
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,93,420,0.22142857142857142,0.55,0.78,0.58,8
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,148,800,0.185,0.63,0.58,0.54,8
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,193,600,0.32166666666666666,0.61,0.7,0.5,8
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,111,500,0.222,0.65,0.66,0.42,8
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,133,450,0.29555555555555557,0.64,0.64,0.52,8
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,70,350,0.2,0.32,0.88,0.64,8
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,198,650,0.3046153846153846,0.43,0.78,0.88,8
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,114,330,0.34545454545454546,0.45,0.7,0.55,8
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,269,700,0.3842857142857143,0.4,0.68,0.84,8
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,366,1200,0.305,0.47,0.72,0.58,8
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,83,220,0.37727272727272726,0.24,0.73,0.62,8
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,232,700,0.3314285714285714,0.49,0.76,0.9,8
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,607,1600,0.379375,0.83,0.43,0.62,8
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,293,750,0.39066666666666666,0.48,0.71,0.86,8
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,66,270,0.24444444444444444,0.46,0.62,0.5,8
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,170,500,0.34,0.5,0.75,0.72,8
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,98,390,0.2512820512820513,0.38,0.68,0.54,8
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,98,350,0.28,0.42,0.72,0.64,8
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,86,260,0.33076923076923076,0.51,0.6,0.5,8
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,48,300,0.16,0.2,0.84,0.82,8
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,129,600,0.215,0.22,0.8,0.86,8
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,183,700,0.26142857142857145,0.18,0.9,0.72,8
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,137,500,0.274,0.16,0.88,0.66,8
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,212,500,0.424,0.3,0.78,0.88,8
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,57,280,0.20357142857142857,0.18,0.86,0.84,8
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,157,650,0.24153846153846154,0.28,0.93,0.52,8
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,111,300,0.37,0.44,0.7,0.54,8
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,151,500,0.302,0.34,0.74,0.82,8
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,112,550,0.20363636363636364,0.21,0.88,0.66,8
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,246,1000,0.246,0.31,0.76,0.55,8
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,251,800,0.31375,0.29,0.86,0.62,8
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,207,900,0.23,0.99,0.45,0.45,8
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,113,550,0.20545454545454545,0.94,0.42,0.4,8
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,124,520,0.23846153846153847,0.9,0.46,0.42,8
@@ -1376,6 +2294,57 @@ sustainable,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,184,500,0.3
 sustainable,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,160,550,0.2909090909090909,0.21,0.88,0.66,8
 sustainable,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,213,1000,0.213,0.31,0.76,0.55,8
 sustainable,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,248,800,0.31,0.29,0.86,0.62,8
+random,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,147,900,0.16333333333333333,0.99,0.45,0.45,9
+random,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,104,550,0.1890909090909091,0.94,0.42,0.4,9
+random,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,142,520,0.27307692307692305,0.9,0.46,0.42,9
+random,Park Guell,Gracia,La Salut,41.4145,2.1527,172,800,0.215,0.92,0.62,0.5,9
+random,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,437,1200,0.3641666666666667,0.88,0.35,0.55,9
+random,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,287,700,0.41,0.87,0.5,0.82,9
+random,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,275,650,0.4230769230769231,0.84,0.5,0.48,9
+random,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,369,1800,0.205,0.89,0.44,0.7,9
+random,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,239,480,0.4979166666666667,0.8,0.55,0.52,9
+random,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,295,500,0.59,0.76,0.58,0.55,9
+random,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,262,1300,0.20153846153846153,0.74,0.83,0.56,9
+random,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,310,1600,0.19375,0.82,0.57,0.64,9
+random,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,142,400,0.355,0.72,0.54,0.46,9
+random,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,132,650,0.20307692307692307,0.66,0.7,0.5,9
+random,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,178,600,0.2966666666666667,0.68,0.61,0.48,9
+random,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,197,350,0.5628571428571428,0.58,0.62,0.45,9
+random,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,208,700,0.29714285714285715,0.62,0.6,0.75,9
+random,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,9
+random,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,79,750,0.10533333333333333,0.77,0.38,0.43,9
+random,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,179,260,0.6884615384615385,0.36,0.72,0.62,9
+random,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,187,420,0.4452380952380952,0.55,0.78,0.58,9
+random,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,92,800,0.115,0.63,0.58,0.54,9
+random,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,250,600,0.4166666666666667,0.61,0.7,0.5,9
+random,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,217,500,0.434,0.65,0.66,0.42,9
+random,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,100,450,0.2222222222222222,0.64,0.64,0.52,9
+random,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,165,350,0.4714285714285714,0.32,0.88,0.64,9
+random,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,250,650,0.38461538461538464,0.43,0.78,0.88,9
+random,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,226,330,0.6848484848484848,0.45,0.7,0.55,9
+random,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,316,700,0.4514285714285714,0.4,0.68,0.84,9
+random,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,293,1200,0.24416666666666667,0.47,0.72,0.58,9
+random,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,178,220,0.8090909090909091,0.24,0.73,0.62,9
+random,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,263,700,0.3757142857142857,0.49,0.76,0.9,9
+random,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,335,1600,0.209375,0.83,0.43,0.62,9
+random,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,362,750,0.4826666666666667,0.48,0.71,0.86,9
+random,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,117,270,0.43333333333333335,0.46,0.62,0.5,9
+random,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,257,500,0.514,0.5,0.75,0.72,9
+random,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,140,390,0.358974358974359,0.38,0.68,0.54,9
+random,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,168,350,0.48,0.42,0.72,0.64,9
+random,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,144,260,0.5538461538461539,0.51,0.6,0.5,9
+random,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,169,300,0.5633333333333334,0.2,0.84,0.82,9
+random,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,218,600,0.36333333333333334,0.22,0.8,0.86,9
+random,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,348,700,0.49714285714285716,0.18,0.9,0.72,9
+random,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,263,500,0.526,0.16,0.88,0.66,9
+random,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,309,500,0.618,0.3,0.78,0.88,9
+random,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,161,280,0.575,0.18,0.86,0.84,9
+random,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,227,650,0.34923076923076923,0.28,0.93,0.52,9
+random,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,175,300,0.5833333333333334,0.44,0.7,0.54,9
+random,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,259,500,0.518,0.34,0.74,0.82,9
+random,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,234,550,0.4254545454545455,0.21,0.88,0.66,9
+random,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,265,1000,0.265,0.31,0.76,0.55,9
+random,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,246,800,0.3075,0.29,0.86,0.62,9
 popularity,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,812,900,0.9022222222222223,0.99,0.45,0.45,9
 popularity,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,416,550,0.7563636363636363,0.94,0.42,0.4,9
 popularity,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,371,520,0.7134615384615385,0.9,0.46,0.42,9
@@ -1478,6 +2447,57 @@ personalized,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,131,500,0.
 personalized,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,76,550,0.13818181818181818,0.21,0.88,0.66,9
 personalized,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,226,1000,0.226,0.31,0.76,0.55,9
 personalized,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,293,800,0.36625,0.29,0.86,0.62,9
+crowd_aware,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,304,900,0.3377777777777778,0.99,0.45,0.45,9
+crowd_aware,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,188,550,0.3418181818181818,0.94,0.42,0.4,9
+crowd_aware,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,180,520,0.34615384615384615,0.9,0.46,0.42,9
+crowd_aware,Park Guell,Gracia,La Salut,41.4145,2.1527,249,800,0.31125,0.92,0.62,0.5,9
+crowd_aware,La Rambla,Ciutat Vella,Raval/Gotic,41.3818,2.1716,566,1200,0.4716666666666667,0.88,0.35,0.55,9
+crowd_aware,Mercat de la Boqueria,Ciutat Vella,Raval,41.3817,2.1714,299,700,0.42714285714285716,0.87,0.5,0.82,9
+crowd_aware,Barcelona Cathedral,Ciutat Vella,Gotic,41.3839,2.1763,269,650,0.41384615384615386,0.84,0.5,0.48,9
+crowd_aware,Gothic Quarter,Ciutat Vella,Gotic,41.383,2.176,727,1800,0.4038888888888889,0.89,0.44,0.7,9
+crowd_aware,Picasso Museum,Ciutat Vella,Sant Pere,41.3852,2.1809,196,480,0.4083333333333333,0.8,0.55,0.52,9
+crowd_aware,Santa Maria del Mar,Ciutat Vella,Born,41.3839,2.182,212,500,0.424,0.76,0.58,0.55,9
+crowd_aware,Parc de la Ciutadella,Ciutat Vella,Sant Pere,41.3881,2.1875,400,1300,0.3076923076923077,0.74,0.83,0.56,9
+crowd_aware,Barceloneta Beach,Ciutat Vella,Barceloneta,41.3784,2.1925,527,1600,0.329375,0.82,0.57,0.64,9
+crowd_aware,Palau de la Musica,Ciutat Vella,Sant Pere,41.3875,2.1753,138,400,0.345,0.72,0.54,0.46,9
+crowd_aware,Montjuic Castle,Sants-Montjuic,Montjuic,41.3634,2.165,161,650,0.24769230769230768,0.66,0.7,0.5,9
+crowd_aware,MNAC,Sants-Montjuic,Montjuic,41.3688,2.1535,206,600,0.3433333333333333,0.68,0.61,0.48,9
+crowd_aware,Joan Miro Foundation,Sants-Montjuic,Montjuic,41.3686,2.1597,139,350,0.39714285714285713,0.58,0.62,0.45,9
+crowd_aware,Poble Espanyol,Sants-Montjuic,Font de la Guatlla,41.3689,2.1479,241,700,0.3442857142857143,0.62,0.6,0.75,9
+crowd_aware,Magic Fountain,Sants-Montjuic,Font de la Guatlla,41.3712,2.1517,0,1500,0.0,0.73,0.49,0.48,9
+crowd_aware,Camp Nou Museum,Les Corts,La Maternitat,41.3809,2.1228,131,750,0.17466666666666666,0.77,0.38,0.43,9
+crowd_aware,Pedralbes Monastery,Les Corts,Pedralbes,41.3958,2.1128,86,260,0.33076923076923076,0.36,0.72,0.62,9
+crowd_aware,Tibidabo Temple,Sarria-Sant Gervasi,Vallvidrera,41.4225,2.1186,88,420,0.20952380952380953,0.55,0.78,0.58,9
+crowd_aware,Tibidabo Amusement Park,Sarria-Sant Gervasi,Vallvidrera,41.4217,2.1192,151,800,0.18875,0.63,0.58,0.54,9
+crowd_aware,CosmoCaixa,Sarria-Sant Gervasi,Sant Gervasi,41.4133,2.1315,191,600,0.31833333333333336,0.61,0.7,0.5,9
+crowd_aware,Bunkers del Carmel,Horta-Guinardo,El Carmel,41.4186,2.1619,111,500,0.222,0.65,0.66,0.42,9
+crowd_aware,Hospital Sant Pau,Horta-Guinardo,Guinardo,41.4122,2.1744,134,450,0.29777777777777775,0.64,0.64,0.52,9
+crowd_aware,Labyrinth Park of Horta,Horta-Guinardo,Horta,41.439,2.1458,66,350,0.18857142857142858,0.32,0.88,0.64,9
+crowd_aware,Mercat dels Encants,Sant Marti,Fort Pienc,41.4031,2.1873,198,650,0.3046153846153846,0.43,0.78,0.88,9
+crowd_aware,Design Museum,Sant Marti,Fort Pienc,41.4025,2.1877,119,330,0.3606060606060606,0.45,0.7,0.55,9
+crowd_aware,Poblenou Rambla,Sant Marti,Poblenou,41.4004,2.2035,270,700,0.38571428571428573,0.4,0.68,0.84,9
+crowd_aware,Bogatell Beach,Sant Marti,Poblenou,41.3912,2.2045,378,1200,0.315,0.47,0.72,0.58,9
+crowd_aware,Can Framis Museum,Sant Marti,Poblenou,41.4045,2.1963,84,220,0.38181818181818183,0.24,0.73,0.62,9
+crowd_aware,Sant Antoni Market,Eixample,Sant Antoni,41.3789,2.1607,238,700,0.34,0.49,0.76,0.9,9
+crowd_aware,Passeig de Gracia,Eixample,Dreta de l'Eixample,41.3925,2.1647,613,1600,0.383125,0.83,0.43,0.62,9
+crowd_aware,Gracia Squares,Gracia,Vila de Gracia,41.4034,2.1586,294,750,0.392,0.48,0.71,0.86,9
+crowd_aware,Casa Vicens,Gracia,Vila de Gracia,41.4036,2.1506,70,270,0.25925925925925924,0.46,0.62,0.5,9
+crowd_aware,El Born Cultural Centre,Ciutat Vella,Born,41.3854,2.1835,176,500,0.352,0.5,0.75,0.72,9
+crowd_aware,Maritime Museum,Ciutat Vella,Raval,41.3769,2.1745,98,390,0.2512820512820513,0.38,0.68,0.54,9
+crowd_aware,History Museum of Catalonia,Ciutat Vella,Barceloneta,41.3803,2.1854,97,350,0.27714285714285714,0.42,0.72,0.64,9
+crowd_aware,Palau Guell,Ciutat Vella,Raval,41.3788,2.174,83,260,0.3192307692307692,0.51,0.6,0.5,9
+crowd_aware,Recinte Fabra i Coats,Sant Andreu,Sant Andreu,41.4339,2.1901,51,300,0.17,0.2,0.84,0.82,9
+crowd_aware,Sant Andreu Old Town,Sant Andreu,Sant Andreu,41.435,2.1905,125,600,0.20833333333333334,0.22,0.8,0.86,9
+crowd_aware,Nou Barris Central Park,Nou Barris,La Guineueta,41.4419,2.1687,180,700,0.2571428571428571,0.18,0.9,0.72,9
+crowd_aware,Turo de la Peira Park,Nou Barris,Turo de la Peira,41.4319,2.166,130,500,0.26,0.16,0.88,0.66,9
+crowd_aware,Sants Market,Sants-Montjuic,Sants,41.3753,2.136,233,500,0.466,0.3,0.78,0.88,9
+crowd_aware,Can Batllo,Sants-Montjuic,La Bordeta,41.3695,2.1338,59,280,0.21071428571428572,0.18,0.86,0.84,9
+crowd_aware,Collserola Viewpoints,Sarria-Sant Gervasi,Collserola,41.4269,2.1005,156,650,0.24,0.28,0.93,0.52,9
+crowd_aware,MUHBA Placa del Rei,Ciutat Vella,Gotic,41.3849,2.1772,111,300,0.37,0.44,0.7,0.54,9
+crowd_aware,Raval Street Art Route,Ciutat Vella,Raval,41.3802,2.1697,154,500,0.308,0.34,0.74,0.82,9
+crowd_aware,El Clot Park,Sant Marti,El Clot,41.4101,2.1885,117,550,0.21272727272727274,0.21,0.88,0.66,9
+crowd_aware,Forum Park,Sant Marti,Diagonal Mar,41.4117,2.2269,246,1000,0.246,0.31,0.76,0.55,9
+crowd_aware,Diagonal Mar Park,Sant Marti,Diagonal Mar,41.4075,2.2165,241,800,0.30125,0.29,0.86,0.62,9
 sustainable,Sagrada Familia,Eixample,Sagrada Familia,41.4036,2.1744,207,900,0.23,0.99,0.45,0.45,9
 sustainable,Casa Batllo,Eixample,Dreta de l'Eixample,41.3917,2.1649,111,550,0.2018181818181818,0.94,0.42,0.4,9
 sustainable,La Pedrera,Eixample,Dreta de l'Eixample,41.3954,2.1619,130,520,0.25,0.9,0.46,0.42,9

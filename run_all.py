@@ -50,6 +50,9 @@ def main() -> None:
     # Sensitivity (parameter sweeps)
     parser.add_argument("--sweep-tourists", type=int, default=3000)
     parser.add_argument("--sweep-runs", type=int, default=5)
+    # Ablation (mechanism decomposition)
+    parser.add_argument("--ablation-tourists", type=int, default=4000)
+    parser.add_argument("--ablation-runs", type=int, default=5)
     # Load (volume) sweep
     parser.add_argument("--load-min", type=int, default=4000)
     parser.add_argument("--load-max", type=int, default=10000)
@@ -57,6 +60,7 @@ def main() -> None:
     parser.add_argument("--load-runs", type=int, default=5)
     # Stage toggles
     parser.add_argument("--skip-main", action="store_true")
+    parser.add_argument("--skip-ablation", action="store_true")
     parser.add_argument("--skip-sensitivity", action="store_true")
     parser.add_argument("--skip-load", action="store_true")
     args = parser.parse_args()
@@ -66,15 +70,23 @@ def main() -> None:
     overall = time.time()
 
     if not args.skip_main:
-        _run("1/3  Main comparison + statistical analysis", [
+        _run("1/4  Main comparison + statistical analysis", [
             py, str(here / "run_experiment.py"),
             "--tourists", str(args.main_tourists),
             "--runs", str(args.main_runs),
             "--output", args.output,
         ])
 
+    if not args.skip_ablation:
+        _run("2/4  Mechanism ablation (sustainable recommender)", [
+            py, str(here / "ablation.py"),
+            "--tourists", str(args.ablation_tourists),
+            "--runs", str(args.ablation_runs),
+            "--output", args.output,
+        ])
+
     if not args.skip_sensitivity:
-        _run("2/3  Parameter sensitivity (strength + compliance/trust)", [
+        _run("3/4  Parameter sensitivity (strength + compliance/trust)", [
             py, str(here / "sensitivity.py"),
             "--tourists", str(args.sweep_tourists),
             "--runs", str(args.sweep_runs),
@@ -82,8 +94,8 @@ def main() -> None:
         ])
 
     if not args.skip_load:
-        _run("3/3  Tourist-volume (saturation) sweep", [
-            py, str(here / "tourism_scaling_analysis.py"),
+        _run("4/4  Tourist-volume (saturation) sweep", [
+            py, str(here / "load_sweep.py"),
             "--min", str(args.load_min),
             "--max", str(args.load_max),
             "--step", str(args.load_step),

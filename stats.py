@@ -44,7 +44,7 @@ KEY_METRICS = [
     "novelty_at_5",
 ]
 
-RECOMMENDERS = ["popularity", "personalized", "sustainable"]
+RECOMMENDERS = ["random", "popularity", "personalized", "crowd_aware", "sustainable"]
 
 
 def _ci95(values: np.ndarray) -> tuple[float, float, float, float]:

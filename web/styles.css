@@ -245,6 +245,8 @@ main {
 .bar-fill.popularity { background: #db4437; }
 .bar-fill.personalized { background: #4285f4; }
 .bar-fill.sustainable { background: #0f9d58; }
+.bar-fill.crowd_aware { background: #9c27b0; }
+.bar-fill.random { background: #78909c; }
 
 .view {
   display: none;
@@ -309,6 +311,8 @@ main {
 .legend-dot.popularity { background: #db4437; }
 .legend-dot.personalized { background: #4285f4; }
 .legend-dot.sustainable { background: #0f9d58; }
+.legend-dot.crowd_aware { background: #9c27b0; }
+.legend-dot.random { background: #78909c; }
 
 .results-layout {
   display: grid;
@@ -357,6 +361,8 @@ td {
 .pill.popularity { background: #db4437; }
 .pill.personalized { background: #4285f4; }
 .pill.sustainable { background: #0f9d58; }
+.pill.crowd_aware { background: #9c27b0; }
+.pill.random { background: #78909c; }
 .pill.all { background: #555; }
 
 .neighbourhood-list {

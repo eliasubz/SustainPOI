@@ -15,7 +15,9 @@ const niceNames = {
   all: "All",
   popularity: "Popularity",
   personalized: "Personalized",
-  sustainable: "Sustainable"
+  crowd_aware: "Crowd-aware",
+  sustainable: "Sustainable",
+  random: "Random"
 };
 
 const metricSpecs = [
@@ -32,7 +34,9 @@ const metricSpecs = [
 const strategyColors = {
   popularity: "#db4437",
   personalized: "#4285f4",
+  crowd_aware: "#9c27b0",
   sustainable: "#0f9d58",
+  random: "#78909c",
   all: "#555"
 };
 

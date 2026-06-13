@@ -77,11 +77,20 @@ class PersonalizedRecommender(BaseRecommender):
 class SustainableRecommender(BaseRecommender):
     name = "sustainable"
 
-    def __init__(self, strength: float = 1.0) -> None:
+    def __init__(self, strength: float = 1.0, weights: dict[str, float] | None = None) -> None:
         # `strength` scales every sustainability-oriented term relative to interest match.
         # strength=1.0 is the default behaviour; strength=0.0 collapses to an
         # interest+accessibility recommender (used by the sensitivity analysis).
         self.strength = strength
+        # Per-mechanism multipliers, used by the ablation study. Each defaults to
+        # 1.0 so the standard recommender is unchanged:
+        #   value     -> sustainability + local + cultural value (and anti-popularity)
+        #   spread    -> under-visited-district bonus (geographic spreading)
+        #   decongest -> low instantaneous-crowding bonus
+        mechanism = {"value": 1.0, "spread": 1.0, "decongest": 1.0}
+        if weights:
+            mechanism.update(weights)
+        self.mechanism = mechanism
 
     def score(self, poi: POI, tourist, model) -> float:
         price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
@@ -95,28 +104,92 @@ class SustainableRecommender(BaseRecommender):
         outdoor_bonus = 0.06 if tourist.outdoor_preference > 0.6 and poi.outdoor else 0.0
         sustainable_weight = 0.18 + 0.22 * tourist.sustainability_sensitivity
         s = self.strength
+        wv = self.mechanism["value"]
+        wsp = self.mechanism["spread"]
+        wd = self.mechanism["decongest"]
         return (
             0.42 * interest_match
-            + s * sustainable_weight * poi.sustainability
-            + s * 0.16 * poi.local_value
-            + s * 0.14 * poi.cultural_value
-            + s * 0.22 * under_visited_bonus
-            + s * 0.18 * low_crowding_bonus
+            + s * wv * sustainable_weight * poi.sustainability
+            + s * wv * 0.16 * poi.local_value
+            + s * wv * 0.14 * poi.cultural_value
+            + s * wsp * 0.22 * under_visited_bonus
+            + s * wd * 0.18 * low_crowding_bonus
             + 0.06 * poi.accessibility
             + family_bonus
             + outdoor_bonus
             - 0.25 * price_penalty
             - 0.18 * distance_penalty
             - 0.45 * crowd_penalty
-            - s * 0.06 * poi.popularity
+            - s * wv * 0.06 * poi.popularity
         )
 
 
+class CrowdAwareRecommender(BaseRecommender):
+    """Interest-matching recommender that actively routes around current crowding
+    but has no sustainability, local-value or district-spreading objective.
+
+    Acts as the congestion-only competitor to the sustainable recommender: the
+    gap between this and `sustainable` isolates the contribution of the
+    sustainability/fairness terms net of decongestion.
+    """
+
+    name = "crowd_aware"
+
+    def score(self, poi: POI, tourist, model) -> float:
+        price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
+        interest_match = sum(tourist.interests[tag] for tag in poi.tags) / len(poi.tags)
+        low_crowding_bonus = max(0.0, 1.0 - model.current_crowding(poi))
+        family_bonus = 0.10 if tourist.travel_with_kids and poi.family_friendly else 0.0
+        outdoor_bonus = 0.08 if tourist.outdoor_preference > 0.6 and poi.outdoor else 0.0
+        return (
+            0.58 * interest_match
+            + 0.14 * poi.popularity
+            + 0.24 * low_crowding_bonus
+            + 0.06 * poi.accessibility
+            + family_bonus
+            + outdoor_bonus
+            - 0.25 * price_penalty
+            - 0.18 * distance_penalty
+            - 0.55 * crowd_penalty
+        )
+
+
+class RandomRecommender(BaseRecommender):
+    """Null baseline: ranks POIs at random (using the model RNG for
+    reproducibility). Feasibility is still enforced downstream by the model.
+
+    Useful as a lower bound: random routing tends to achieve low spatial
+    inequality simply by scattering tourists, which shows that a low district
+    Gini is trivial on its own -- the real achievement is low inequality *while*
+    keeping tourist satisfaction high.
+    """
+
+    name = "random"
+
+    def score(self, poi: POI, tourist, model) -> float:
+        return float(model.rng.random())
+
+
+# Single-mechanism weight sets for the ablation study.
+_ABLATION_WEIGHTS = {
+    "sust_all": {"value": 1.0, "spread": 1.0, "decongest": 1.0},
+    "sust_value": {"value": 1.0, "spread": 0.0, "decongest": 0.0},
+    "sust_spread": {"value": 0.0, "spread": 1.0, "decongest": 0.0},
+    "sust_decongest": {"value": 0.0, "spread": 0.0, "decongest": 1.0},
+}
+
+
 def get_recommender(name: str, sustainability_strength: float = 1.0) -> BaseRecommender:
+    if name in _ABLATION_WEIGHTS:
+        return SustainableRecommender(
+            strength=sustainability_strength, weights=_ABLATION_WEIGHTS[name]
+        )
     recommenders = {
         "popularity": PopularityRecommender(),
         "personalized": PersonalizedRecommender(),
         "sustainable": SustainableRecommender(strength=sustainability_strength),
+        "crowd_aware": CrowdAwareRecommender(),
+        "random": RandomRecommender(),
     }
     return recommenders[name]
 
