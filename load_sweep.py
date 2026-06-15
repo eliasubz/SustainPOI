@@ -1,20 +1,3 @@
-"""Scaling (tourist-volume) sweep.
-
-Comparing the 4,000- and 10,000-tourist runs shows that the recommender's
-advantages are of two kinds: *distributional* gains (district/wealth Gini, local
-spend) that hold regardless of crowd size, and *congestion* gains (over-capacity
-share, peak occupancy) that exist only below a saturation threshold. This script
-sweeps the number of tourists for all three recommenders and plots how each
-family of metrics evolves with load, so the saturation transition is visible
-rather than inferred from two points.
-
-It runs every recommender at every volume, because the point is how the *gaps
-between strategies* change with load, not just one strategy.
-
-Run: `python load_sweep.py --min 4000 --max 10000 --step 1000 --runs 5`
-Outputs `load_sweep.csv` (per-run long table) and two figures.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -47,7 +30,7 @@ STRUCTURE = [
 ]
 
 
-def run_sweep(volumes: list[int], runs: int, visits_per_tourist: int, seed_base: int) -> pd.DataFrame:
+def run_sweep(volumes, runs, visits_per_tourist, seed_base):
     rows = []
     for n in volumes:
         for recommender in RECOMMENDERS:
@@ -70,7 +53,7 @@ def run_sweep(volumes: list[int], runs: int, visits_per_tourist: int, seed_base:
     return pd.DataFrame(rows)
 
 
-def _plot_panel(df: pd.DataFrame, specs, suptitle: str, path: Path) -> None:
+def _plot_panel(df, specs, suptitle, path):
     agg = df.groupby(["tourists", "recommender"], as_index=False).mean(numeric_only=True)
     fig, axes = plt.subplots(2, 2, figsize=(13, 8))
     for ax, (metric, title) in zip(axes.ravel(), specs):
@@ -88,7 +71,7 @@ def _plot_panel(df: pd.DataFrame, specs, suptitle: str, path: Path) -> None:
     plt.close(fig)
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Sweep tourist volume for all three recommenders.")
     parser.add_argument("--min", type=int, default=4000)
     parser.add_argument("--max", type=int, default=10000)

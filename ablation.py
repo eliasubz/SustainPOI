@@ -1,29 +1,3 @@
-"""Ablation of the sustainable recommender's mechanisms.
-
-The sustainable recommender bundles three distinct mechanisms, all scaled
-together by its strength parameter:
-
-  * value     -- sustainability + local + cultural value (and a small
-                 anti-popularity term);
-  * spread    -- a bonus for under-visited districts (direct geographic
-                 spreading);
-  * decongest -- a bonus for low instantaneous crowding.
-
-Because they move together, the headline comparison cannot say which mechanism
-produces which outcome. This script runs the recommender with each mechanism in
-isolation and with all three on, so every metric can be attributed to its cause.
-
-To isolate the *routing* effect cleanly, all four arms are run under an identical
-tourist-behaviour model (none of them trigger the sustainability-specific trust
-discounting that the deployed `sustainable` recommender is subject to), so the
-"all mechanisms" arm here is slightly more effective than the headline
-`sustainable` number -- the comparison of interest is *between* the arms.
-
-Run: `python ablation.py --tourists 4000 --runs 5 --output outputs`.
-A higher tourist count is the default because the decongestion mechanism only
-matters once POIs approach their capacity.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -62,7 +36,7 @@ PANELS = [
 ]
 
 
-def run_ablation(tourists: int, runs: int, visits_per_tourist: int, seed_base: int) -> pd.DataFrame:
+def run_ablation(tourists, runs, visits_per_tourist, seed_base):
     rows = []
     for arm in ARMS:
         for run in range(runs):
@@ -86,7 +60,7 @@ def run_ablation(tourists: int, runs: int, visits_per_tourist: int, seed_base: i
     return pd.DataFrame(rows)
 
 
-def plot_ablation(df: pd.DataFrame, output_dir: Path) -> None:
+def plot_ablation(df, output_dir):
     agg = df.groupby("arm")[[m for m, _ in PANELS]].mean()
     fig, axes = plt.subplots(2, 3, figsize=(15, 8))
     labels = [ARM_LABELS[a] for a in ARMS]
@@ -106,7 +80,7 @@ def plot_ablation(df: pd.DataFrame, output_dir: Path) -> None:
     plt.close(fig)
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Ablate the sustainable recommender's mechanisms.")
     parser.add_argument("--tourists", type=int, default=4000)
     parser.add_argument("--runs", type=int, default=5)

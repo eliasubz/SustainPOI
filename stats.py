@@ -1,20 +1,3 @@
-"""Statistical analysis of the recommender comparison.
-
-The experiment uses a *matched-seed* (randomised complete block) design: within
-each run all three recommenders are evaluated on an identical tourist population,
-because the agent profiles are drawn from the seed before any recommender logic
-runs. Runs therefore act as blocks, which makes a **paired** comparison across
-recommenders both valid and more powerful than an unpaired (Welch) test.
-
-This module reports, per metric:
-  * 95% confidence intervals for each recommender's mean (t-based, across runs);
-  * pairwise paired t-tests for the three recommender pairs, with Holm-Bonferroni
-    correction across the pairs and a paired Cohen's d effect size.
-
-It can be run standalone (`python stats.py --input outputs`) or called from
-`run_experiment.py` via `analyse(summary_df, output_dir)`.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -46,9 +29,8 @@ KEY_METRICS = [
 
 RECOMMENDERS = ["random", "popularity", "personalized", "crowd_aware", "sustainable"]
 
-
-def _ci95(values: np.ndarray) -> tuple[float, float, float, float]:
-    """Return (mean, ci_low, ci_high, std) using a t-interval across runs."""
+#Return (mean, ci_low, ci_high, std) using a t-interval across runs. CI means Confidence Interval
+def _ci95(values):
     n = len(values)
     mean = float(np.mean(values))
     if n < 2:
@@ -59,7 +41,7 @@ def _ci95(values: np.ndarray) -> tuple[float, float, float, float]:
     return mean, mean - margin, mean + margin, sd
 
 
-def confidence_intervals(summary: pd.DataFrame) -> pd.DataFrame:
+def confidence_intervals(summary):
     rows = []
     metrics = [m for m in KEY_METRICS if m in summary.columns]
     for recommender in RECOMMENDERS:
@@ -81,21 +63,14 @@ def confidence_intervals(summary: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _paired_cohens_d(diff: np.ndarray) -> float:
-    """Paired Cohen's d = mean(difference) / sd(difference)."""
+def _paired_cohens_d(diff):
     sd = np.std(diff, ddof=1)
     if sd == 0:
         return 0.0
     return float(np.mean(diff) / sd)
 
-
-def _holm_correction(pairs: list[dict]) -> None:
-    """Apply Holm-Bonferroni across a family of comparisons (in place).
-
-    The family is the set of pairwise tests *within one metric* (3 comparisons),
-    which is the standard way to control the family-wise error rate for an
-    all-pairs comparison without being as conservative as plain Bonferroni.
-    """
+# Apply Holm-Bonferroni across a family of comparisons (in place).
+def _holm_correction(pairs):
     order = sorted(range(len(pairs)), key=lambda i: pairs[i]["p_value"])
     m = len(pairs)
     prev = 0.0
@@ -107,7 +82,7 @@ def _holm_correction(pairs: list[dict]) -> None:
         pairs[idx]["significant_5pct"] = bool(adjusted < 0.05)
 
 
-def pairwise_tests(summary: pd.DataFrame) -> pd.DataFrame:
+def pairwise_tests(summary):
     rows = []
     metrics = [m for m in KEY_METRICS if m in summary.columns]
     pivot = {
@@ -146,7 +121,7 @@ def pairwise_tests(summary: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _print_console_summary(ci: pd.DataFrame, tests: pd.DataFrame) -> None:
+def _print_console_summary(ci, tests):
     print("\n95% confidence intervals (mean across runs):")
     for metric in ci["metric"].unique():
         sub = ci[ci["metric"] == metric]
@@ -169,8 +144,7 @@ def _print_console_summary(ci: pd.DataFrame, tests: pd.DataFrame) -> None:
             )
 
 
-def analyse(summary: pd.DataFrame, output_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Compute CIs + paired tests, write CSVs, print a console summary."""
+def analyse(summary, output_dir):
     output_dir.mkdir(exist_ok=True)
     ci = confidence_intervals(summary)
     tests = pairwise_tests(summary)
@@ -181,7 +155,7 @@ def analyse(summary: pd.DataFrame, output_dir: Path) -> tuple[pd.DataFrame, pd.D
     return ci, tests
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Statistical analysis of recommender comparison.")
     parser.add_argument("--input", type=Path, default=Path("outputs"))
     args = parser.parse_args()

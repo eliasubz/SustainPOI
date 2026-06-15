@@ -38,7 +38,7 @@ REPORT_METRICS = [
 ]
 
 
-def run_scenario(tourists: int, recommender: str, seed: int, visits_per_tourist: int) -> TourismModel:
+def run_scenario(tourists, recommender, seed, visits_per_tourist):
     model = TourismModel(
         n_tourists=tourists,
         recommender_name=recommender,
@@ -49,7 +49,7 @@ def run_scenario(tourists: int, recommender: str, seed: int, visits_per_tourist:
     return model
 
 
-def plot_metrics(summary: pd.DataFrame, output_dir: Path) -> None:
+def plot_metrics(summary, output_dir):
     metrics = [m for m in REPORT_METRICS if m in summary.columns]
     plot_data = summary.melt(
         id_vars=["recommender", "run"], value_vars=metrics, var_name="metric", value_name="value"
@@ -77,7 +77,7 @@ def plot_metrics(summary: pd.DataFrame, output_dir: Path) -> None:
     plt.close(grid.figure)
 
 
-def plot_neighbourhoods(neighbourhoods: pd.DataFrame, output_dir: Path) -> None:
+def plot_neighbourhoods(neighbourhoods, output_dir):
     top = (
         neighbourhoods.groupby("neighbourhood", as_index=False)["visits"].sum()
         .sort_values("visits", ascending=False)
@@ -97,8 +97,7 @@ def plot_neighbourhoods(neighbourhoods: pd.DataFrame, output_dir: Path) -> None:
     plt.close()
 
 
-def plot_district_spending(district_df: pd.DataFrame, output_dir: Path) -> None:
-    """Where tourist money lands, by district, for each recommender."""
+def plot_district_spending(district_df, output_dir):
     data = district_df.groupby(["recommender", "district"], as_index=False)["spend_share"].mean()
     plt.figure(figsize=(12, 7))
     sns.barplot(
@@ -113,7 +112,7 @@ def plot_district_spending(district_df: pd.DataFrame, output_dir: Path) -> None:
     plt.close()
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Run the Barcelona sustainable POI recommender simulation.")
     parser.add_argument("--tourists", type=int, default=4000)
     parser.add_argument("--runs", type=int, default=10)
@@ -133,7 +132,7 @@ def main() -> None:
 
     for run in range(args.runs):
         # One seed per run, shared by all three recommenders: identical tourist
-        # populations per run (matched/blocked design enabling paired tests).
+        # populations per run (matched/blocked design enabling paired tests)
         seed = args.seed_base + run
         for recommender in RECOMMENDERS:
             print(f"Running {recommender} run {run + 1}/{args.runs} with {args.tourists} tourists")

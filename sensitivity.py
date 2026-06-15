@@ -1,24 +1,3 @@
-"""Sensitivity analysis for the sustainability-aware recommender.
-
-Two sweeps address gaps flagged in the project report:
-
-1. **Sustainability strength (lambda).** The sustainable recommender's
-   sustainability/local-value/under-visited/low-crowding terms are all scaled by
-   a single `sustainability_strength`. At lambda=0 it collapses toward a
-   personalized recommender; larger lambda pushes harder on city-management
-   goals. This sweep shows how district fairness, coverage and wealth spread
-   trade off against tourist satisfaction as lambda grows.
-
-2. **Tourist compliance / trust.** The headline results assume tourists mostly
-   follow recommendations. Real nudges are only partially adopted. This sweep
-   lowers the mean compliance and trust together and shows how much of the
-   sustainable recommender's advantage survives when tourists increasingly
-   ignore the sustainable suggestions.
-
-Run standalone: `python sensitivity.py --tourists 3000 --runs 5 --output outputs`.
-Outputs two CSVs and two PNGs.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -49,12 +28,12 @@ TRACK = [
 ]
 
 
-def _mean_metrics(records: list[dict]) -> dict[str, float]:
+def _mean_metrics(records):
     df = pd.DataFrame(records)
     return {m: float(df[m].mean()) for m in TRACK if m in df.columns}
 
 
-def sweep_strength(tourists: int, runs: int, seed_base: int) -> pd.DataFrame:
+def sweep_strength(tourists, runs, seed_base):
     rows = []
     for strength in STRENGTH_GRID:
         per_run = []
@@ -75,8 +54,7 @@ def sweep_strength(tourists: int, runs: int, seed_base: int) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def reference_lines(tourists: int, runs: int, seed_base: int) -> dict[str, dict[str, float]]:
-    """Personalized and popularity baselines as horizontal references."""
+def reference_lines(tourists, runs, seed_base):
     refs = {}
     for recommender in ("personalized", "popularity"):
         per_run = []
@@ -90,7 +68,7 @@ def reference_lines(tourists: int, runs: int, seed_base: int) -> dict[str, dict[
     return refs
 
 
-def sweep_compliance(tourists: int, runs: int, seed_base: int) -> pd.DataFrame:
+def sweep_compliance(tourists, runs, seed_base):
     rows = []
     for level in COMPLIANCE_GRID:
         per_run = []
@@ -112,11 +90,11 @@ def sweep_compliance(tourists: int, runs: int, seed_base: int) -> pd.DataFrame:
     return rows_to_df(rows)
 
 
-def rows_to_df(rows: list[dict]) -> pd.DataFrame:
+def rows_to_df(rows):
     return pd.DataFrame(rows)
 
 
-def plot_strength(df: pd.DataFrame, refs: dict, output_dir: Path) -> None:
+def plot_strength(df, refs, output_dir):
     panels = [
         ("district_gini", "District Gini (lower = fairer)"),
         ("avg_satisfaction", "Avg satisfaction"),
@@ -144,7 +122,7 @@ def plot_strength(df: pd.DataFrame, refs: dict, output_dir: Path) -> None:
     plt.close(fig)
 
 
-def plot_compliance(df: pd.DataFrame, refs: dict, output_dir: Path) -> None:
+def plot_compliance(df, refs, output_dir):
     panels = [
         ("district_gini", "District Gini (lower = fairer)"),
         ("avg_sustainability", "Avg sustainability"),
@@ -168,7 +146,7 @@ def plot_compliance(df: pd.DataFrame, refs: dict, output_dir: Path) -> None:
     plt.close(fig)
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Sensitivity analysis for the sustainable recommender.")
     parser.add_argument("--tourists", type=int, default=3000)
     parser.add_argument("--runs", type=int, default=5)

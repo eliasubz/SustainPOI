@@ -40,7 +40,7 @@ class POI:
     close_hour: float
 
     @property
-    def operating_hours(self) -> float:
+    def operating_hours(self):
         return max(1.0, self.close_hour - self.open_hour)
 
 
@@ -48,7 +48,7 @@ class POI:
 #   1. feasibility (a tourist cannot visit a POI that is closed when they arrive), and
 #   2. deriving an *instantaneous* concurrent capacity from the daily-throughput capacity.
 # Exact, name-keyed overrides take priority; otherwise hours are assigned by category.
-_HOUR_OVERRIDES: dict[str, tuple[float, float]] = {
+_HOUR_OVERRIDES = {
     "Magic Fountain": (19.0, 22.5),          # evening light-and-water show
     "Tibidabo Amusement Park": (11.0, 20.0),
     "Tibidabo Temple": (10.0, 18.0),
@@ -67,7 +67,7 @@ _MARKETS = {
 _PARK_KEYWORDS = ("Beach", "Park", "Parc", "Viewpoints")
 
 
-def _opening_hours(name: str, tags: tuple[str, ...]) -> tuple[float, float]:
+def _opening_hours(name, tags):
     if name in _HOUR_OVERRIDES:
         return _HOUR_OVERRIDES[name]
     if name in _STREET_LIKE:
@@ -84,7 +84,7 @@ def _opening_hours(name: str, tags: tuple[str, ...]) -> tuple[float, float]:
     return (9.5, 19.5)
 
 
-def load_barcelona_pois() -> list[POI]:
+def load_barcelona_pois():
     raw = [
         ("Sagrada Familia", "Eixample", "Sagrada Familia", 41.4036, 2.1744, ("architecture", "religion", "history"), .99, 26, 2.0, 900, .45, .45, .98, False, True, .88),
         ("Casa Batllo", "Eixample", "Dreta de l'Eixample", 41.3917, 2.1649, ("architecture", "museums", "history"), .94, 35, 1.5, 550, .42, .40, .90, False, True, .85),

@@ -1,25 +1,3 @@
-"""Run the complete study in one command.
-
-Executes the three analyses in order, all writing to the same output directory:
-
-  1. run_experiment.py  -- the 3-way recommender comparison at a fixed tourist
-     count, which also runs the statistical analysis (stats.py): headline
-     metrics, confidence intervals, paired tests, spatial/wealth/movement data,
-     comparison plots, and the CSVs the web dashboard reads.
-  2. sensitivity.py     -- the two parameter sweeps (sustainability strength and
-     tourist compliance/trust).
-  3. load_sweep.py      -- the tourist-volume (saturation) sweep.
-
-Each stage is a normal script invocation, so the produced outputs are identical
-to running them by hand. Any stage can be skipped, and the key knobs are exposed
-as pass-through arguments.
-
-Examples:
-    python run_all.py                       # full study with defaults
-    python run_all.py --skip-load           # everything except the volume sweep
-    python run_all.py --main-runs 5 --sweep-runs 3 --load-runs 3   # faster
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -29,7 +7,7 @@ import time
 from pathlib import Path
 
 
-def _run(stage: str, cmd: list[str]) -> None:
+def _run(stage, cmd):
     print("\n" + "=" * 70)
     print(f">>> {stage}")
     print("    " + " ".join(cmd))
@@ -41,7 +19,7 @@ def _run(stage: str, cmd: list[str]) -> None:
     print(f"--- {stage} done in {time.time() - t0:.0f}s ---", flush=True)
 
 
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description="Run the full recommender study end to end.")
     parser.add_argument("--output", default="outputs", help="Shared output directory for all stages.")
     # Main experiment

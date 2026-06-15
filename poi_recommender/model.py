@@ -24,8 +24,7 @@ ACTIVE_DAY_WINDOW = 10.0
 LOCAL_SPEND_SCALE = 18.0
 
 
-def _sample_beta_mean(rng: np.random.Generator, mean: float, concentration: float = 6.0) -> float:
-    """Draw from a Beta distribution with a target mean (re-parameterised by concentration)."""
+def _sample_beta_mean(rng, mean, concentration = 6.0):
     mean = float(np.clip(mean, 1e-3, 1 - 1e-3))
     a = mean * concentration
     b = (1.0 - mean) * concentration
@@ -33,7 +32,7 @@ def _sample_beta_mean(rng: np.random.Generator, mean: float, concentration: floa
 
 
 class TouristAgent(Agent):
-    def __init__(self, model: "TourismModel") -> None:
+    def __init__(self, model):
         super().__init__(model)
         rng = model.rng
         self.interests = self._sample_interests(rng)
@@ -71,7 +70,7 @@ class TouristAgent(Agent):
         self.personal_candidates = ranked[:10]
 
     @staticmethod
-    def _sample_interests(rng: np.random.Generator) -> dict[str, float]:
+    def _sample_interests(rng):
         profile = str(rng.choice(
             ["mainstream", "culture", "food", "nature", "family", "nightlife"],
             p=[.32, .24, .14, .12, .10, .08],
@@ -89,19 +88,19 @@ class TouristAgent(Agent):
             weights[interest] = min(1.0, weights[interest] + float(rng.uniform(.35, .65)))
         return weights
 
-    # ------------------------------------------------------------------ behaviour
-    def _travel_time(self, distance_km: float) -> float:
+
+    def _travel_time(self, distance_km):
         speeds = {"walking": 4.2, "public_transport": 12.0, "taxi": 18.0}
         return distance_km / speeds[self.mobility_mode]
 
-    def _follows_recommender(self, model: "TourismModel") -> bool:
+    def _follows_recommender(self, model):
         prob = self.compliance
         # Following a sustainability nudge requires trust, because it can cost personal utility.
         if model.recommender_name == "sustainable":
             prob *= 0.35 + 0.65 * self.trust_in_sustainability
         return bool(model.rng.random() < prob)
 
-    def _feasible(self, poi: POI, time_now: float, model: "TourismModel") -> bool:
+    def _feasible(self, poi, time_now, model):
         if poi.id in self.visited_ids:
             return False
         distance = haversine_km(self.current_lat, self.current_lon, poi.lat, poi.lon)
@@ -122,8 +121,7 @@ class TouristAgent(Agent):
             return False
         return True
 
-    def decide(self, time_now: float, model: "TourismModel") -> tuple[list[POI], POI | None, bool]:
-        """Return (recommended_list, chosen_poi_or_None, followed_recommender)."""
+    def decide(self, time_now, model):
         candidates = model.recommender.recommend(self, model, k=model.recommendation_k + 6)
         candidates = [poi for poi in candidates if poi.id not in self.visited_ids]
         recommendations = candidates[: model.recommendation_k]
@@ -142,10 +140,10 @@ class TouristAgent(Agent):
             chosen = feasible[0] if feasible else None
         return recommendations, chosen, followed
 
-    def interest_match(self, poi: POI) -> float:
+    def interest_match(self, poi):
         return sum(self.interests[tag] for tag in poi.tags) / len(poi.tags)
 
-    def satisfaction(self, poi: POI, distance_km: float, crowding: float) -> float:
+    def satisfaction(self, poi, distance_km, crowding):
         interest_match = self.interest_match(poi)
         price_fit = 1.0 if poi.price <= self.budget else max(0.0, 1 - (poi.price - self.budget) / 40)
         distance_fit = max(0.0, 1 - max(0.0, distance_km - self.walking_tolerance) / 8)
@@ -155,7 +153,7 @@ class TouristAgent(Agent):
             1,
         ))
 
-    def primary_interests(self) -> str:
+    def primary_interests(self):
         ranked = sorted(self.interests.items(), key=lambda item: item[1], reverse=True)
         return "|".join(interest for interest, _ in ranked[:3])
 
@@ -212,19 +210,12 @@ class TourismModel(Model):
         for tourist_id, agent in enumerate(self.agents_by_id):
             agent.tourist_id = tourist_id
 
-    # ----------------------------------------------------------------- crowding
-    def current_crowding(self, poi: POI) -> float:
+
+    def current_crowding(self, poi):
         return self.occupancy[poi.id] / self.instant_capacity[poi.id]
 
-    # ----------------------------------------------------------------- the day
-    def step(self) -> None:
-        """Run a full simulated day as a time-ordered discrete-event simulation.
-
-        Decisions are processed in true chronological order, and crowding reflects who is
-        actually inside a POI at that moment (arrivals raise occupancy, departures lower it).
-        This removes the processing-order artefact of a single cumulative visit counter and
-        lets congestion build up and decay over the day.
-        """
+    # Run a full simulated day as a time-ordered discrete-event simulation.
+    def step(self):
         counter = count()
         heap: list[tuple[float, int, str, object]] = []
         for agent in self.agents_by_id:
@@ -274,13 +265,13 @@ class TourismModel(Model):
             heapq.heappush(heap, (depart_time, next(counter), "depart", chosen.id))
             heapq.heappush(heap, (depart_time, next(counter), "decide", agent))
 
-    # ----------------------------------------------------------------- recording
-    def record_visit(self, poi: POI) -> None:
+
+    def record_visit(self, poi):
         self.poi_visits[poi.id] += 1
         self.district_visits[poi.district] += 1
         self.neighbourhood_visits[poi.neighbourhood] += 1
 
-    def record_spending(self, poi: POI) -> None:
+    def record_spending(self, poi):
         spend = poi.price + LOCAL_SPEND_SCALE * poi.local_value
         self.district_spending[poi.district] += spend
         self.neighbourhood_spending[poi.neighbourhood] += spend
@@ -290,12 +281,12 @@ class TourismModel(Model):
 
     def record_recommendation(
         self,
-        tourist: TouristAgent,
-        sequence: int,
-        recommendations: list[POI],
-        chosen: POI | None,
-        followed: bool,
-    ) -> None:
+        tourist,
+        sequence,
+        recommendations,
+        chosen,
+        followed):
+
         relevant = [poi for poi in recommendations if tourist.interest_match(poi) >= 0.55]
         all_relevant = [poi for poi in self.pois if tourist.interest_match(poi) >= 0.55]
         visited_recommended = chosen is not None and chosen.id in {poi.id for poi in recommendations}
@@ -325,14 +316,14 @@ class TourismModel(Model):
 
     def record_itinerary(
         self,
-        tourist: TouristAgent,
-        sequence: int,
-        previous: POI | None,
-        chosen: POI,
-        distance_km: float,
-        travel_time_hours: float,
-        arrival_hour: float,
-    ) -> None:
+        tourist,
+        sequence,
+        previous,
+        chosen,
+        distance_km,
+        travel_time_hours,
+        arrival_hour):
+    
         self.itinerary_events.append({
             "recommender": self.recommender_name,
             "tourist_id": tourist.tourist_id,
@@ -347,8 +338,8 @@ class TourismModel(Model):
             "mobility_mode": tourist.mobility_mode,
         })
 
-    # ----------------------------------------------------------------- metrics
-    def _intra_tourist_diversity(self) -> float:
+
+    def _intra_tourist_diversity(self):
         diversities = [
             recommendation_diversity(agent.visited)
             for agent in self.agents_by_id
@@ -356,7 +347,7 @@ class TourismModel(Model):
         ]
         return float(np.mean(diversities)) if diversities else 0.0
 
-    def summary_metrics(self) -> dict[str, float | str | int]:
+    def summary_metrics(self):
         all_satisfaction = [score for agent in self.agents_by_id for score in agent.satisfaction_scores]
         total_visits = sum(self.poi_visits.values())
         poi_counts = [self.poi_visits[poi.id] for poi in self.pois]
@@ -406,7 +397,7 @@ class TourismModel(Model):
             "exposure_gini": gini(exposure_with_zeros),
         }
 
-    def poi_rows(self) -> list[dict[str, float | str | int]]:
+    def poi_rows(self):
         rows = []
         for poi in self.pois:
             visits = self.poi_visits[poi.id]
@@ -426,7 +417,7 @@ class TourismModel(Model):
             })
         return rows
 
-    def neighbourhood_rows(self) -> list[dict[str, float | str | int]]:
+    def neighbourhood_rows(self):
         total = max(1, sum(self.neighbourhood_visits.values()))
         neighbourhoods = sorted({poi.neighbourhood for poi in self.pois})
         return [
@@ -439,7 +430,7 @@ class TourismModel(Model):
             for neighbourhood in neighbourhoods
         ]
 
-    def district_rows(self) -> list[dict[str, float | str | int]]:
+    def district_rows(self):
         total_visits = max(1, sum(self.district_visits.values()))
         total_spend = max(1e-9, self.total_spend)
         return [
@@ -454,14 +445,14 @@ class TourismModel(Model):
             for district in self.districts
         ]
 
-    def recommendation_rows(self) -> list[dict[str, float | str | int]]:
+    def recommendation_rows(self):
         return self.recommendation_events
 
-    def itinerary_rows(self) -> list[dict[str, float | str | int]]:
+    def itinerary_rows(self):
         return self.itinerary_events
 
 
-def recommendation_diversity(recommendations: list[POI]) -> float:
+def recommendation_diversity(recommendations):
     if len(recommendations) < 2:
         return 0.0
     distances = []

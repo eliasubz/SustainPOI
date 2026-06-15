@@ -6,7 +6,7 @@ from collections import Counter
 from .data import POI
 
 
-def haversine_km(a_lat: float, a_lon: float, b_lat: float, b_lon: float) -> float:
+def haversine_km(a_lat, a_lon, b_lat, b_lon):
     radius = 6371.0
     d_lat = math.radians(b_lat - a_lat)
     d_lon = math.radians(b_lon - a_lon)
@@ -16,7 +16,7 @@ def haversine_km(a_lat: float, a_lon: float, b_lat: float, b_lon: float) -> floa
     return 2 * radius * math.asin(math.sqrt(h))
 
 
-def minmax_distance_penalty(distance_km: float, walking_tolerance: float) -> float:
+def minmax_distance_penalty(distance_km, walking_tolerance):
     if distance_km <= walking_tolerance:
         return 0.0
     return min(1.0, (distance_km - walking_tolerance) / 8.0)
@@ -25,7 +25,7 @@ def minmax_distance_penalty(distance_km: float, walking_tolerance: float) -> flo
 class BaseRecommender:
     name = "base"
 
-    def recommend(self, tourist, model, k: int = 5) -> list[POI]:
+    def recommend(self, tourist, model, k = 5):
         scored = [(self.score(poi, tourist, model), poi) for poi in model.pois]
         scored.sort(key=lambda item: item[0], reverse=True)
         return [poi for _, poi in scored[:k]]
@@ -34,9 +34,8 @@ class BaseRecommender:
         raise NotImplementedError
 
     @staticmethod
-    def common_penalties(poi: POI, tourist, model) -> tuple[float, float, float]:
-        # Crowding is now the *instantaneous* occupancy at the current simulated time,
-        # not the cumulative all-day visit count. This makes congestion time-dependent.
+    def common_penalties(poi, tourist, model):
+        # Crowding is the *instantaneous* occupancy at the current simulated time,
         crowd = model.current_crowding(poi)
         price_penalty = max(0.0, (poi.price - tourist.budget) / 40.0)
         distance = haversine_km(tourist.current_lat, tourist.current_lon, poi.lat, poi.lon)
@@ -48,7 +47,7 @@ class BaseRecommender:
 class PopularityRecommender(BaseRecommender):
     name = "popularity"
 
-    def score(self, poi: POI, tourist, model) -> float:
+    def score(self, poi, tourist, model):
         price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
         return poi.popularity - 0.35 * price_penalty - 0.08 * distance_penalty - 0.12 * crowd_penalty
 
@@ -56,7 +55,7 @@ class PopularityRecommender(BaseRecommender):
 class PersonalizedRecommender(BaseRecommender):
     name = "personalized"
 
-    def score(self, poi: POI, tourist, model) -> float:
+    def score(self, poi, tourist, model):
         price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
         interest_match = sum(tourist.interests[tag] for tag in poi.tags) / len(poi.tags)
         family_bonus = 0.12 if tourist.travel_with_kids and poi.family_friendly else 0.0
@@ -77,7 +76,7 @@ class PersonalizedRecommender(BaseRecommender):
 class SustainableRecommender(BaseRecommender):
     name = "sustainable"
 
-    def __init__(self, strength: float = 1.0, weights: dict[str, float] | None = None) -> None:
+    def __init__(self, strength = 1.0, weights = None):
         # `strength` scales every sustainability-oriented term relative to interest match.
         # strength=1.0 is the default behaviour; strength=0.0 collapses to an
         # interest+accessibility recommender (used by the sensitivity analysis).
@@ -92,7 +91,7 @@ class SustainableRecommender(BaseRecommender):
             mechanism.update(weights)
         self.mechanism = mechanism
 
-    def score(self, poi: POI, tourist, model) -> float:
+    def score(self, poi, tourist, model):
         price_penalty, distance_penalty, crowd_penalty = self.common_penalties(poi, tourist, model)
         interest_match = sum(tourist.interests[tag] for tag in poi.tags) / len(poi.tags)
         district_visits = model.district_visits[poi.district]
@@ -123,16 +122,9 @@ class SustainableRecommender(BaseRecommender):
             - s * wv * 0.06 * poi.popularity
         )
 
-
+# Interest-matching recommender that actively routes around current crowding
+# but has no sustainability, local-value or district-spreading objective.
 class CrowdAwareRecommender(BaseRecommender):
-    """Interest-matching recommender that actively routes around current crowding
-    but has no sustainability, local-value or district-spreading objective.
-
-    Acts as the congestion-only competitor to the sustainable recommender: the
-    gap between this and `sustainable` isolates the contribution of the
-    sustainability/fairness terms net of decongestion.
-    """
-
     name = "crowd_aware"
 
     def score(self, poi: POI, tourist, model) -> float:
@@ -153,20 +145,12 @@ class CrowdAwareRecommender(BaseRecommender):
             - 0.55 * crowd_penalty
         )
 
-
+# Null baseline: ranks POIs at random (using the model RNG for
+# reproducibility). Feasibility is still enforced downstream by the model.
 class RandomRecommender(BaseRecommender):
-    """Null baseline: ranks POIs at random (using the model RNG for
-    reproducibility). Feasibility is still enforced downstream by the model.
-
-    Useful as a lower bound: random routing tends to achieve low spatial
-    inequality simply by scattering tourists, which shows that a low district
-    Gini is trivial on its own -- the real achievement is low inequality *while*
-    keeping tourist satisfaction high.
-    """
-
     name = "random"
 
-    def score(self, poi: POI, tourist, model) -> float:
+    def score(self, poi, tourist, model):
         return float(model.rng.random())
 
 
@@ -179,7 +163,7 @@ _ABLATION_WEIGHTS = {
 }
 
 
-def get_recommender(name: str, sustainability_strength: float = 1.0) -> BaseRecommender:
+def get_recommender(name, sustainability_strength = 1.0):
     if name in _ABLATION_WEIGHTS:
         return SustainableRecommender(
             strength=sustainability_strength, weights=_ABLATION_WEIGHTS[name]
@@ -194,7 +178,7 @@ def get_recommender(name: str, sustainability_strength: float = 1.0) -> BaseReco
     return recommenders[name]
 
 
-def entropy(counts: list[int]) -> float:
+def entropy(counts):
     total = sum(counts)
     if total == 0:
         return 0.0
@@ -202,7 +186,7 @@ def entropy(counts: list[int]) -> float:
     return -sum(p * math.log(p) for p in probs)
 
 
-def gini(counter: Counter | dict[str, int] | dict[str, float]) -> float:
+def gini(counter):
     values = sorted(counter.values())
     n = len(values)
     total = sum(values)

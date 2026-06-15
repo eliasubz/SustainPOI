@@ -8,8 +8,6 @@ POIs to actually visit under time, budget, opening-hours, crowding and
 compliance constraints; the simulator then measures crowding, spatial fairness,
 wealth distribution and recommendation quality across strategies.
 
-See `PROJECT_REPORT.md` for the full write-up, results and discussion.
-
 ## Structure
 
 ```
